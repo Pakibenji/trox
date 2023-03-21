@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :users , controllers: {sessions:'users/sessions'}
+
+  resources :users do 
+    resources :tools
+  end
+
+  resources :tools do 
+    resources :loans
+  end
  
   resources :loans
   resources :tools
