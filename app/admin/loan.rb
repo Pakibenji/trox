@@ -6,8 +6,18 @@ ActiveAdmin.register Loan do
       id_column
       column :start_date
       column :end_date
+      column :created_at
       actions
     end
+
+    show do
+        attributes_table do
+          row :start_date
+          row :end_date
+          row :created_at
+          row :updated_at
+        end
+      end
   
     form do |f|
       f.inputs do
@@ -16,4 +26,6 @@ ActiveAdmin.register Loan do
       end
       f.actions
     end
+
+
   end
