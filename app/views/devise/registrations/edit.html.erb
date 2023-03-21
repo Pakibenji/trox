@@ -1,0 +1,78 @@
+<h2>Editer <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.telephone_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_complement %><br />
+    <%= f.text_field :address_complement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postcode %><br />
+    <%= f.number_field :postcode %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>En attente de confirmation : <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :password %> <i>(laisser vide si vous ne souhaitez pas le modifier)</i><br />
+    <%= f.password_field :password, autocomplete: "Nouveau mot de passe" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> caractères minimum</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "Nouveau mot de passe" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current_password %> <i>(nous avons besoin de votre mot de passe actuel pour confirmer vos changements)</i><br />
+    <%= f.password_field :current_password, autocomplete: "Mot de passe actuel" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Modifier" %>
+  </div>
+<% end %>
+
+<h3>Annuler la création de mon compte</h3>
+
+<div>Pas satisfait? <%= button_to "Annuler mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sur?", turbo_confirm: "Êtes-vous sur?" }, method: :delete %></div>
+
+<%= link_to "Retour", :back %>
