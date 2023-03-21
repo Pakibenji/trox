@@ -333,11 +333,6 @@ ActiveAdmin.setup do |config|
   #
   # config.use_webpacker = true
 # ...
-config.register_page 'Tools' do
-  menu label: 'Tools', priority: 4
-  content title: 'Tools' do
-    render partial: 'admin/tools/index', locals: { resources: Tool.all }
-  end
-end
+
 
 end
