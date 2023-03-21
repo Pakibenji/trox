@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_21_104824) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_21_135659) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,18 +19,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_104824) do
     t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "tool_id"
+    t.bigint "user_id"
+    t.index ["tool_id"], name: "index_loans_on_tool_id"
+    t.index ["user_id"], name: "index_loans_on_user_id"
   end
 
   create_table "tools", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "pic"
-    t.boolean "loan"
+    t.boolean "loaned"
     t.string "location"
     t.decimal "caution"
     t.string "condition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_tools_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,4 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_104824) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "loans", "tools"
+  add_foreign_key "loans", "users"
+  add_foreign_key "tools", "users"
 end
