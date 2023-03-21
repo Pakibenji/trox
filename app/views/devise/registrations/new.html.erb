@@ -4,27 +4,27 @@
 
   <div class="form">
     <%= f.label :firstname %><br />
-    <%= f.text_field :firstname, autofocus: true, autocomplete: "Prénom" %>
+    <%= f.text_field :firstname, required: true, minlength: 2, autofocus: true, autocomplete: "Prénom" %>
   </div>
     
   <div class="form">
     <%= f.label :lastname %><br />
-    <%= f.text_field :lastname, autofocus: true, autocomplete: "Nom" %>
+    <%= f.text_field :lastname, required: true, autofocus: true, autocomplete: "Nom" %>
   </div>
   
   <div class= "form">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email" %>
   </div>
 
   <div class= "form">
   <%= f.label :phone %><br />
-  <%= f.telephone_field :phone, autofocus: true, autocomplete: "Téléphone" %>
+  <%= f.telephone_field :phone, autofocus: true, required: true, autocomplete: "Téléphone" %>
   </div>
    
   <div class= "form">
     <%= f.label :address %><br />
-    <%= f.text_field :address, autofocus: true, autocomplete: "Adresse" %>
+    <%= f.text_field :address, autofocus: true, required: true, autocomplete: "Adresse" %>
   </div>
    
   <div class= "form">
@@ -34,7 +34,7 @@
 
   <div class= "form">
     <%= f.label :postcode %><br />
-    <%= f.number_field :postcode, in: 10000..99999 , autofocus: true, autocomplete: "Code postal" %>
+    <%= f.number_field :postcode, in: 10000..99999 ,required: true, autofocus: true, autocomplete: "Code postal" %>
   </div>
     
   <div class= "form">

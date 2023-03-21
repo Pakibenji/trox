@@ -10,32 +10,32 @@
 
   <div class="field">
     <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
+    <%= f.text_field :firstname, minlength: 2, autofocus: true, required: true, minlength: 2 %>
   </div>
 
   <div class="field">
     <%= f.label :lastname %><br />
-    <%= f.text_field :lastname %>
+    <%= f.text_field :lastname, autofocus: true,  required: true %>
   </div>
 
   <div class="field">
     <%= f.label :phone %><br />
-    <%= f.telephone_field :phone %>
+    <%= f.telephone_field :phone, autofocus: true,  required: true %>
   </div>
 
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.text_field :address, autofocus: true,  required: true %>
   </div>
 
   <div class="field">
     <%= f.label :address_complement %><br />
-    <%= f.text_field :address_complement %>
+    <%= f.text_field :address_complement, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :postcode %><br />
-    <%= f.number_field :postcode %>
+    <%= f.number_field :postcode, in: 10000..99999, autofocus: true, required: true %>
   </div>
   
   <div class="field">
