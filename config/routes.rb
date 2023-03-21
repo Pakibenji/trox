@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   devise_for :users , controllers: {sessions:'users/sessions'}
- 
   resources :loans
   resources :tools
   get 'about', to: 'static_pages#about'

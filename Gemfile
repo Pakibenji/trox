@@ -79,4 +79,5 @@ gem "mailcatcher", "~> 0.2.4"
 
 gem "dotenv", "~> 2.8"
 gem "pry", "~> 0.14.2"
+gem "table_print"
 
