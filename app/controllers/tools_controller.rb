@@ -1,5 +1,7 @@
 class ToolsController < ApplicationController
   before_action :set_tool, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  before_action :check_owner, only: [:edit, :update, :destroy]
 
   # GET /tools or /tools.json
   def index
@@ -12,7 +14,7 @@ class ToolsController < ApplicationController
 
   # GET /tools/new
   def new
-    @tool = Tool.new
+    @tool = current_user.tools.build
   end
 
   # GET /tools/1/edit
@@ -21,7 +23,7 @@ class ToolsController < ApplicationController
 
   # POST /tools or /tools.json
   def create
-    @tool = Tool.new(tool_params)
+    @tool = current_user.tools.build(tool_params)
 
     respond_to do |format|
       if @tool.save
@@ -61,6 +63,10 @@ class ToolsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_tool
       @tool = Tool.find(params[:id])
+    end
+
+    def check_owner 
+      redirect_to @tool, alert:"Vous ne pouvez pas modifier cet outil" unless current_user == @tool.user
     end
 
     # Only allow a list of trusted parameters through.
