@@ -13,19 +13,23 @@
  *= require_tree .
  *= require_self
  */
- /*NAVBAR*/
-.navbar{
-  background-color: #ff6347;
-}
-
-.nav-link{
-  padding: 10px;
-  font-size: 15px;
-  color: black;
-  font-weight: bolder;
-}
-
-
+ /*FORMS*/
+ #sign_in .col, #sign_up .col, #forgot_password .col{
+  text-align: center;
+  padding: 15px;
+ }
+ #sign_in h2, #sign_up h2, #forgot_password h2{
+  margin-top: 30px;
+  text-align: center;
+ }
+ #sign_in .text, #sign_up .text, #forgot_password .text{
+  text-align: center;
+ }
+ 
+ .form_link{
+  padding: 20px
+ }
+ 
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
