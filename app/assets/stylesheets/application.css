@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ /*NAVBAR*/
+.navbar{
+  background-color: #ff6347;
+}
+
+.nav-link{
+  padding: 10px;
+  font-size: 15px;
+  color: black;
+  font-weight: bolder;
+}
+
