@@ -27,6 +27,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -85,4 +86,6 @@ gem "table_print"
 gem 'activeadmin'
 gem 'sass-rails'
 gem 'inherited_resources', '~> 1.13.1'
+
+gem "dotenv-rails"
 
