@@ -11,18 +11,6 @@ require 'faker'
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 
-10.times do
-    Tool.create(
-      title: Faker::Commerce.product_name,
-      description: Faker::Lorem.paragraph,
-      pic: Faker::LoremFlickr.image,
-      loaned: false,
-      location: Faker::Address.city,
-      caution: Faker::Commerce.price(range: 50..100),
-      condition: Faker::Lorem.word,
-      user_id: rand(1..10)
-    )
-  end
   
   # Création des utilisateurs
   10.times do
@@ -36,6 +24,20 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
       address_complement: Faker::Address.secondary_address,
       postcode: Faker::Address.zip_code,
       image_url: Faker::LoremFlickr.image(size: "50x50")
+    )
+  end
+
+  
+10.times do
+    Tool.create!(
+      title: Faker::Commerce.product_name,
+      description: Faker::Lorem.paragraph,
+      pic: Faker::LoremFlickr.image,
+      loaned: false,
+      location: Faker::Address.city,
+      caution: Faker::Commerce.price(range: 50..100),
+      condition: Faker::Lorem.word,
+      user_id: rand(1..10)
     )
   end
   
