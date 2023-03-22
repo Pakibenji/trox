@@ -1,6 +1,6 @@
 class ToolsController < ApplicationController
   before_action :set_tool, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new]
   before_action :check_owner, only: [:edit, :update, :destroy]
 
   # GET /tools or /tools.json
