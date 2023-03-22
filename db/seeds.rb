@@ -18,10 +18,10 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
     )
   end
 
-
-
+  
 10.times do
-    Tool.create(
+    Tool.create!(
+
       title: Faker::Commerce.product_name,
       description: Faker::Lorem.paragraph,
       pic: Faker::LoremFlickr.image,
@@ -32,8 +32,6 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
       user_id: rand(1..10)
     )
   end
-  
-
   
   # Création des prêts aléatoires
   10.times do
