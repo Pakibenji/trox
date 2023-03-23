@@ -1,4 +1,15 @@
+<div data-controller="map">
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+
+   <div id="map"></div>
+
+  </div>
+  <div class="column" style="background-color:#bbb;">
+
+
 <%= form_with(model: tool) do |form| %>
+
   <% if tool.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(tool.errors.count, "error") %> prohibited this tool from being saved:</h2>
@@ -32,9 +43,14 @@
   </div>
 
   <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
-  </div>
+  <%= form.label :location, style: "display: block" %>
+  <%= form.hidden_field :location, id: 'tool_location' %>
+
+    <div id="geocoder" class="geocoder"></div>
+</div>
+
+
+
 
   <div>
     <%= form.label :caution, style: "display: block" %>
@@ -50,3 +66,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+</div>
