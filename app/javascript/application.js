@@ -54,12 +54,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
-const codesPostaux = require("codes-postaux");
+/*const codesPostaux = require("codes-postaux");
 
 codesPostaux.find(75001);
 codesPostaux.find("75001");
-
-<script>
+*/
+/*<script>
 function editDescription() {
   var description = document.getElementById("description");
   var currentText = description.value;
@@ -68,4 +68,4 @@ function editDescription() {
     description.value = newText;
   }
 }
-</script>
+</script>*/

@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :tools
   has_many :loans
-  has_one_attached :avatar
+  has_one_attached :image_url
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

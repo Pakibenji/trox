@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   resources :users do 
     resources :tools
   end
-
+  resources :users do
+    resources :image_url,  only: [:create, :destroy]
+  end
   resources :tools do 
     resources :loans
   end
