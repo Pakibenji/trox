@@ -349,6 +349,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  activestorage (~> 7.0)
   bootsnap
   capybara
   debug
