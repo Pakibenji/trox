@@ -1,14 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tools</h1>
+<h1 id="index_title">Trouve ce dont tu as besoin :</h1>
 
-<div id="tools">
-  <% @tools.each do |tool| %>
-    <%= render tool %>
-    <p>
-      <%= link_to "Show this tool", tool %>
-    </p>
-  <% end %>
+
+<div class= "container">
+<div class="card-group">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<% @tools.each do |tools| %>
+  
+   <div class="col">
+    <div class="card" >    
+      <img src=<%= tools.pic %> class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= tools.title %></h5>
+        <p class="card-title"><%= tools.description %>
+        <p class="card-text"><%= tools.loaned %></p>
+        <p class="card-text"><%= tools.caution %> €</p>
+        <p class="card-text"><%= tools.condition %></p>
+        <%= link_to "Voir l'annonce", tools %>
+      </div>
+       <div class="card-footer">
+        <small >Créé le : <%= tools.created_at%></small>
+      </div>
+    </div>
+    </div>
+<%end%>
 </div>
-
-<%= link_to "New tool", new_tool_path %>

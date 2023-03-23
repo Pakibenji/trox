@@ -29,6 +29,27 @@
  .form_link{
   padding: 20px
  }
+
+ /*INDEX TOOLS*/
+ #index_title{
+  text-align: center;
+  margin:  100px 0px;
+  font-style: italic;
+ }
+ .card-img-top{
+  padding: 20px;
+ }
+ .card-group .card{
+  background-color: rgb(210, 210, 210)
+ }
+ .card-group .card-footer{
+  background-color: #ff6347;
+  color :#000
+ }
+ .card-group .card-body{
+  text-align: center;
+ }
+
  
 @charset "UTF-8";
 /*!
