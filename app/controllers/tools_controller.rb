@@ -10,6 +10,7 @@ class ToolsController < ApplicationController
 
   # GET /tools/1 or /tools/1.json
   def show
+    @tool = Tool.find(params[:id])
   end
 
   # GET /tools/new
