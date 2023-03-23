@@ -12,6 +12,7 @@ class LoansController < ApplicationController
 
   # GET /loans/new
   def new
+    @tool = Tool.find(params[:tool_id])
     @loan = Loan.new
   end
 
@@ -21,16 +22,15 @@ class LoansController < ApplicationController
 
   # POST /loans or /loans.json
   def create
+    @tool = Tool.find(params[:tool_id])
     @loan = Loan.new(loan_params)
+    @loan.tool = @tool
+    @loan.user = current_user
 
-    respond_to do |format|
-      if @loan.save
-        format.html { redirect_to loan_url(@loan), notice: "Loan was successfully created." }
-        format.json { render :show, status: :created, location: @loan }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @loan.errors, status: :unprocessable_entity }
-      end
+    if @loan.save
+      redirect_to @loan
+    else
+      render 'new'
     end
   end
 

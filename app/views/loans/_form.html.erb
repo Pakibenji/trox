@@ -1,27 +1,11 @@
-<%= form_with(model: loan) do |form| %>
-  <% if loan.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+<h1>Emprunter <%= @tool.title %></h1>
 
-      <ul>
-        <% loan.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with(model: @loan, url: tool_loans_path(@tool)) do |f| %>
+  <%= f.label :start_date %>
+  <%= f.date_select :start_date %>
 
-  <div>
-    <%= form.label :start_date, style: "display: block" %>
-    <%= form.datetime_field :start_date %>
-  </div>
+  <%= f.label :end_date %>
+  <%= f.date_select :end_date %>
 
-  <div>
-    <%= form.label :end_date, style: "display: block" %>
-    <%= form.datetime_field :end_date %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  <%= f.submit %>
 <% end %>

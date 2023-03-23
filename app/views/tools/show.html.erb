@@ -7,4 +7,5 @@
   <%= link_to "Back to tools", tools_path %>
 
   <%= button_to "Destroy this tool", @tool, method: :delete %>
+  <%= link_to "Emprunter l'outil", new_tool_loan_path(@tool) %>
 </div>
