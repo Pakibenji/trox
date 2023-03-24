@@ -7,7 +7,7 @@ export default class extends Controller {
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhY2hpbGxzIiwiYSI6ImNsZmt6ZGtmMDAwNXUzeW8zYWs1ZTR6ejAifQ.lgzKRSs2gyIavtaSX7kbwQ'
     var map = new mapboxgl.Map ({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/dark-v10',
       center: [2.209667, 46.232193],
       zoom: 5
     });
@@ -35,7 +35,7 @@ export default class extends Controller {
       .setPopup(new mapboxgl.Popup({ offset: 25 })
       .setHTML(
         "<div class="+"link_popup"+">"+
-          "<a href=/tools/"+ marker.id +">" +
+          "<a href=/tools/"+ marker +">" +
           "<h1>"+ marker.name +"</h1>" +
           "<p>"+ marker.location +"</p>"+
           '<p>'+ +'</p>'+
