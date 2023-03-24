@@ -1,9 +1,9 @@
+<div data-controller="map" >
 
-<div data-controller="map">
 <div class="row">
   <div class="column" style="background-color:#aaa;">
 
-   <div id="map"></div>
+   <div id="map" data-markers="<%= @markers.to_json %>"></div>
 
   </div>
   <div class="column" style="background-color:#bbb;">
