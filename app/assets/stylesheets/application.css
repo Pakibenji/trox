@@ -9,9 +9,79 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+
  *.
  *= require_self
+
+ *= require application
+
  */
+/*Show tool*/
+.loan_button{
+  text-decoration: none;
+  color: white;
+}
+.loan_button:hover{
+  text-decoration: none;
+  color: white;
+}
+
+#loan_button{
+  background-color: #6c757d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; 
+  margin: 20px;
+}
+
+#loan_button:hover{
+  background-color: #fd7e14;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; 
+  margin: 20px;
+}
+
+#tool_show_description{
+  margin-top:100px;
+  text-align: center;
+
+}
+#tool_show_description .text-primary{
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+#tool_show_title{
+  text-align: center;
+}
+
+#tool_show_list{
+  text-align: center;
+}
+
+.tool_pic_show{
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: .5s ease;
+}
+
+.tool_pic_show:hover {
+  transform: scale(1.5); 
+  position: relative !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 100%;
+  transition: .5s ease;
+  border-radius: 10px;
+}
 /*FORMS*/
 
 * {
@@ -115,7 +185,6 @@ input[type="submit"]:hover {
 }
 .card-img-top {
   padding: 20px;
-
 }
 .card-group .card {
   background-color: rgb(210, 210, 210);
@@ -125,23 +194,20 @@ input[type="submit"]:hover {
   color: #000;
 }
 .card-group .card-body {
-
   width: 100%;
-  height: 100%; 
- }
- #cards .card{
-  background-color: rgb(210, 210, 210)
- }
- #cards .card-footer{
+  height: 100%;
+}
+#cards .card {
+  background-color: rgb(210, 210, 210);
+}
+#cards .card-footer {
   background-color: #ff6347;
-  color :#000
- }
- #cards .card-body{
-
+  color: #000;
+}
+#cards .card-body {
   text-align: center;
 }
 
-@charset "UTF-8";
 /*!
 * Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
 * Copyright 2013-2022 Start Bootstrap
@@ -12072,17 +12138,17 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: #ff6347;
+    background-color: transparent;
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: transparent;
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fd7e14;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -12094,7 +12160,7 @@ body {
     background-color: #ff6347;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #ff6347;
+    color: #000;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #000;
@@ -12152,7 +12218,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: #fd7e14;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -12423,6 +12489,7 @@ section {
   border-radius: 0.25rem !important;
 }
 
+
 .input-border{
   border: 0.5px solid lightgrey;
 }
@@ -12443,3 +12510,60 @@ section {
 .bouton:hover {
   background-color: #fd7e14;
 }
+=======
+.dropdown-menu {
+  display: none;
+}
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-toggle:focus + .dropdown-menu {
+  display: block;
+}
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav .dropdown-menu {
+  margin-top: 0;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  font-weight: normal;
+}
+
+.navbar-nav .dropdown-menu a {
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-nav .dropdown-menu a:hover,
+.navbar-nav .dropdown-menu a:focus {
+  color: #fff;
+  background-color: #1abc9c;
+}
+
+.navbar-nav .dropdown-menu a.active {
+  color: #fff;
+  background-color: #1abc9c;
+}
+
+.navbar-nav .dropdown-item.disabled,
+.navbar-nav .dropdown-item:disabled {
+  color: #6c757d;
+  background-color: red;
+}
+
+.navbar-nav .dropdown-menu .dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+

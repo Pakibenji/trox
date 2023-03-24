@@ -1,5 +1,8 @@
 class LoansController < ApplicationController
   before_action :set_loan, only: %i[ show edit update destroy ]
+  before_action :set_tool, only: [:new, :create]
+  before_action :check_loan_status, only: [:new, :create]
+
 
   # GET /loans or /loans.json
   def index
@@ -66,5 +69,15 @@ class LoansController < ApplicationController
     # Only allow a list of trusted parameters through.
     def loan_params
       params.require(:loan).permit(:start_date, :end_date)
+    end
+
+    def set_tool
+      @tool = Tool.find(params[:tool_id])
+    end
+  
+    def check_loan_status
+      if @tool.loaned?
+        redirect_to tools_path, notice: "Cet outil est déjà loué."
+      end
     end
 end

@@ -1,4 +1,11 @@
+<%= render "/layouts/navbar"%>
+
 <p style="color: green"><%= notice %></p>
+
+
+<div>
+<%= render "mapbox" %>
+</div>
 
 <h1 id="index_title">Trouve ce dont tu as besoin :</h1>
 
@@ -18,8 +25,8 @@
         <p class="card-text"><%= tools.condition %></p>
         <%= link_to "Voir l'annonce", tools %>
       </div>
-       <div class="card-footer">
-        <small >Créé le : <%= tools.created_at%></small>
+       <div class="card-footer" style="text-align:center">
+        <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
       </div>
     </div>
     </div>

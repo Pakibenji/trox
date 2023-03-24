@@ -1,11 +1,11 @@
+<%= render "/layouts/navbar"%>
 <p style="color: green"><%= notice %></p>
-
+<section class="bg-light">
 <%= render @tool %>
 
-<div>
-  <%= link_to "Edit this tool", edit_tool_path(@tool) %> |
-  <%= link_to "Back to tools", tools_path %>
-
-  <%= button_to "Destroy this tool", @tool, method: :delete %>
-  <%= link_to "Emprunter l'outil", new_tool_loan_path(@tool) %>
+<div class="d-flex justify-content-evenly">
+  <button type="button" id="loan_button"><%= link_to "Retour aux outils", tools_path, class:"loan_button" %></button>
+  <%= button_to "Supprimer l'annonce", @tool, method: :delete, class:"loan_button",id:"loan_button" %></button>
+  <button type="button" id="loan_button"><%= link_to "Modifier l'annonce", edit_tool_path(@tool), class:"loan_button"%></button>
 </div>
+</section>
