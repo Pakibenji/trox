@@ -4,13 +4,12 @@
 
 
 <div class= "container">
-<div class="card-group">
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
 <% @tools.each do |tools| %>
   
    <div class="col">
-    <div class="card" >    
-      <%= image_tag tools.pic,  class:"card-img-top"%>
+    <div class="card">    
+      <%= image_tag tools.pic, class:"card-img-top"%>
       <div class="card-body">
         <h5 class="card-title"><%= tools.title %></h5>
         <p class="card-title"><%= tools.description %>
