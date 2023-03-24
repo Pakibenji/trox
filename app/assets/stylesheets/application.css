@@ -113,15 +113,17 @@ input[type="submit"]:hover {
  }
  .card-img-top{
   padding: 20px;
+  width: 100%;
+  height: 100%; 
  }
- .card-group .card{
+ #cards .card{
   background-color: rgb(210, 210, 210)
  }
- .card-group .card-footer{
+ #cards .card-footer{
   background-color: #ff6347;
   color :#000
  }
- .card-group .card-body{
+ #cards .card-body{
   text-align: center;
  }
 
