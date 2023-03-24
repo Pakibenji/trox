@@ -1,42 +1,43 @@
 <%= render "/layouts/navbar"%>
 <section id="sign_up" class="container">
+<div class="card card-style1 border-0">
 <h2>S'inscrire</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="col">
     <%= f.label :firstname, "Prénom" %><br />
-    <%= f.text_field :firstname, required: true, minlength: 2, autofocus: true, autocomplete: "Prénom",class: "text" %>
+    <%= f.text_field :firstname, required: true, minlength: 2, autofocus: true, autocomplete: "Prénom", style:"width: 100%;height:50px; border:0.5px solid dark-grey; border-radius:4px; text-align:center;" %>
   </div>
     
   <div class="col">
     <%= f.label :lastname, "Nom" %><br />
-    <%= f.text_field :lastname, required: true, autofocus: true, autocomplete: "Nom",class: "text" %>
+    <%= f.text_field :lastname, required: true, autofocus: true, autocomplete: "Nom", style:"width: 100%;height:50px; border:0.5px solid dark-grey; border-radius:4px; text-align:center;" %>
   </div>
   
   <div class= "col">
     <%= f.label :email, "Email" %><br />
-    <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email",class: "text" %>
+    <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
 
   <div class= "col">
   <%= f.label :phone, "Numéro de téléphone" %><br />
-  <%= f.telephone_field :phone, autofocus: true, required: true, autocomplete: "Téléphone",class: "text" %>
+  <%= f.telephone_field :phone, autofocus: true, required: true, autocomplete: "Téléphone", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
   </div>
    
   <div class= "col">
     <%= f.label :address, "Adresse" %><br />
-    <%= f.text_field :address, autofocus: true, required: true, autocomplete: "Adresse",class: "text" %>
+    <%= f.text_field :address, autofocus: true, required: true, autocomplete: "Adresse", style:"width: 100%;height:50px; border:0.5px solid dark-grey; border-radius:4px; text-align:center;" %>
   </div>
    
   <div class= "col">
     <%= f.label :address_complement, "Complément d'adresse" %><br />
-    <%= f.text_field :address_complement, autofocus: true, autocomplete: "Complément d'adresse",class: "text" %>
+    <%= f.text_field :address_complement, autofocus: true, autocomplete: "Complément d'adresse", style:"width: 100%;height:50px; border:0.5px solid dark-grey; border-radius:4px; text-align:center;" %>
   </div>
 
   <div class= "col">
     <%= f.label :postcode, "Code postal" %><br />
-    <%= f.number_field :postcode, in: 10000..99999 ,required: true, autofocus: true, autocomplete: "Code postal",class: "text" %>
+    <%= f.number_field :postcode, in: 10000..99999 ,required: true, autofocus: true, autocomplete: "Code postal", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
     
   <div class= "col">
@@ -44,14 +45,14 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> caractères minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "Nouveau mot de passe",class: "text" %>
+    <%= f.password_field :password, autocomplete: "Nouveau mot de passe", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
    
   <div class= "col">
     <%= f.label :password, "Confirmation du mot de passe" %>
     <% if @minimum_password_length %>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "Nouveau mot de passe",class: "text" %>
+    <%= f.password_field :password, autocomplete: "Nouveau mot de passe", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
   </div>
 
   <div class="col">
@@ -59,7 +60,6 @@
   </div>
 
 <% end %>
-  <div class="form_link">
-    <%= render "devise/shared/links" %>
-  </div>
+</div>
 </section>
+
