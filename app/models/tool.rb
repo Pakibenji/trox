@@ -9,4 +9,11 @@ class Tool < ApplicationRecord
     validates :condition, presence: true
     validates :caution, presence: true
 
+    geocoded_by :full_address
+    after_validation :geocode 
+
+    def full_address
+        "#{location}"
+    end
+
 end
