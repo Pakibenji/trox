@@ -9,8 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
+ *.
  *= require_self
  */
 /*FORMS*/
@@ -61,7 +60,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #6c757d;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -71,7 +70,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #fd7e14;
 }
 
 .error-message {
@@ -3100,7 +3099,7 @@ textarea.form-control.is-valid {
 .was-validated .form-select:valid:focus,
 .form-select.is-valid:focus {
   border-color: #67c29c;
-  box-shadow: 0 0 0 0.25rem rgba(103, 194, 156, 0.25);
+  box-shadow: 0 0 0 0.25rem #fd7e14;
 }
 
 .was-validated .form-check-input:valid,
@@ -3218,7 +3217,7 @@ textarea.form-control.is-invalid {
 }
 .was-validated .form-check-input:invalid:focus,
 .form-check-input.is-invalid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(161, 100, 104, 0.25);
+  box-shadow: 0 0 0 0.25rem #fd7e14;
 }
 .was-validated .form-check-input:invalid ~ .form-check-label,
 .form-check-input.is-invalid ~ .form-check-label {
@@ -4517,7 +4516,7 @@ fieldset:disabled .btn {
   list-style: none;
 }
 
-.nav-link {
+.link {
   display: block;
   padding: 0.5rem 1rem;
   color: #64a19d;
@@ -12422,4 +12421,25 @@ section {
 }
 .rounded {
   border-radius: 0.25rem !important;
+}
+
+.input-border{
+  border: 0.5px solid lightgrey;
+}
+
+.bouton{
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 10px;
+  
+}
+
+.bouton:hover {
+  background-color: #fd7e14;
 }
