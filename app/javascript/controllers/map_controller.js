@@ -33,7 +33,16 @@ export default class extends Controller {
       new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat])
       .setPopup(new mapboxgl.Popup({ offset: 25 })
-      )
+      .setHTML(
+        "<div class="+"link_popup"+">"+
+          "<a href=/tools/"+ marker.id +">" +
+          "<h1>"+ marker.name +"</h1>" +
+          "<p>"+ marker.location +"</p>"+
+          '<p>'+ +'</p>'+
+          "</a>"+
+          "</div>"
+
+      ))
       .addTo(map);
     })
 

@@ -12,7 +12,8 @@ class ToolsController < ApplicationController
         lat: tool.latitude,
         lng: tool.longitude,
         name: tool.title,
-        location: tool.location
+        location: tool.location,
+        id: tool.id
       }
     end
   end
