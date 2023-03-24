@@ -116,6 +116,7 @@ input[type="submit"]:hover {
 }
 .card-img-top {
   padding: 20px;
+
 }
 .card-group .card {
   background-color: rgb(210, 210, 210);
@@ -125,6 +126,19 @@ input[type="submit"]:hover {
   color: #000;
 }
 .card-group .card-body {
+
+  width: 100%;
+  height: 100%; 
+ }
+ #cards .card{
+  background-color: rgb(210, 210, 210)
+ }
+ #cards .card-footer{
+  background-color: #ff6347;
+  color :#000
+ }
+ #cards .card-body{
+
   text-align: center;
 }
 
