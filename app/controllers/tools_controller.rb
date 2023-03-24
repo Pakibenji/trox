@@ -6,6 +6,15 @@ class ToolsController < ApplicationController
   # GET /tools or /tools.json
   def index
     @tools = Tool.all
+
+    @markers = @tools.map do |tool|
+      {
+        lat: tool.latitude,
+        lng: tool.longitude,
+        name: tool.title,
+        location: tool.location
+      }
+    end
   end
 
   # GET /tools/1 or /tools/1.json
