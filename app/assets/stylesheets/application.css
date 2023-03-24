@@ -10,8 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ *= require application
  */
 /*FORMS*/
 
@@ -116,7 +115,6 @@ input[type="submit"]:hover {
 }
 .card-img-top {
   padding: 20px;
-
 }
 .card-group .card {
   background-color: rgb(210, 210, 210);
@@ -126,19 +124,17 @@ input[type="submit"]:hover {
   color: #000;
 }
 .card-group .card-body {
-
   width: 100%;
-  height: 100%; 
- }
- #cards .card{
-  background-color: rgb(210, 210, 210)
- }
- #cards .card-footer{
+  height: 100%;
+}
+#cards .card {
+  background-color: rgb(210, 210, 210);
+}
+#cards .card-footer {
   background-color: #ff6347;
-  color :#000
- }
- #cards .card-body{
-
+  color: #000;
+}
+#cards .card-body {
   text-align: center;
 }
 
@@ -12073,17 +12069,17 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: #ff6347;
+    background-color: transparent;
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: transparent;
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fd7e14;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -12095,7 +12091,7 @@ body {
     background-color: #ff6347;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #ff6347;
+    color: #000;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #000;
@@ -12153,7 +12149,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: #fd7e14;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -12424,7 +12420,6 @@ section {
   border-radius: 0.25rem !important;
 }
 
-
 .dropdown-menu {
   display: none;
 }
@@ -12478,5 +12473,5 @@ section {
   height: 0;
   margin: 0.5rem 0;
   overflow: hidden;
-  border-top: 1px solid rgba(0,0,0,0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
