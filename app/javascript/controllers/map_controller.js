@@ -35,10 +35,9 @@ export default class extends Controller {
       .setPopup(new mapboxgl.Popup({ offset: 25 })
       .setHTML(
         "<div class="+"link_popup"+">"+
-          "<a href=/tools/"+ marker +">" +
+          "<a href=/tools/"+ marker.id +">" +
           "<h1>"+ marker.name +"</h1>" +
           "<p>"+ marker.location +"</p>"+
-          '<p>'+ +'</p>'+
           "</a>"+
           "</div>"
 
