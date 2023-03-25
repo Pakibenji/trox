@@ -89,3 +89,7 @@ gem 'inherited_resources', '~> 1.13.1'
 
 gem "dotenv-rails"
 
+
+gem "activestorage", "~> 7.0"
+
+gem "geocoder"

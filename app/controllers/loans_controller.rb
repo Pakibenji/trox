@@ -1,5 +1,8 @@
 class LoansController < ApplicationController
   before_action :set_loan, only: %i[ show edit update destroy ]
+  before_action :set_tool, only: [:new, :create]
+  before_action :check_loan_status, only: [:new, :create]
+
 
   # GET /loans or /loans.json
   def index
@@ -12,6 +15,7 @@ class LoansController < ApplicationController
 
   # GET /loans/new
   def new
+    @tool = Tool.find(params[:tool_id])
     @loan = Loan.new
   end
 
@@ -21,16 +25,15 @@ class LoansController < ApplicationController
 
   # POST /loans or /loans.json
   def create
+    @tool = Tool.find(params[:tool_id])
     @loan = Loan.new(loan_params)
+    @loan.tool = @tool
+    @loan.user = current_user
 
-    respond_to do |format|
-      if @loan.save
-        format.html { redirect_to loan_url(@loan), notice: "Loan was successfully created." }
-        format.json { render :show, status: :created, location: @loan }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @loan.errors, status: :unprocessable_entity }
-      end
+    if @loan.save
+      redirect_to @loan
+    else
+      render 'new'
     end
   end
 
@@ -66,5 +69,15 @@ class LoansController < ApplicationController
     # Only allow a list of trusted parameters through.
     def loan_params
       params.require(:loan).permit(:start_date, :end_date)
+    end
+
+    def set_tool
+      @tool = Tool.find(params[:tool_id])
+    end
+  
+    def check_loan_status
+      if @tool.loaned?
+        redirect_to tools_path, notice: "Cet outil est déjà loué."
+      end
     end
 end

@@ -1,14 +1,34 @@
+<%= render "/layouts/navbar"%>
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Tools</h1>
 
-<div id="tools">
-  <% @tools.each do |tool| %>
-    <%= render tool %>
-    <p>
-      <%= link_to "Show this tool", tool %>
-    </p>
-  <% end %>
+<div>
+<%= render "mapbox" %>
 </div>
 
-<%= link_to "New tool", new_tool_path %>
+<h1 id="index_title">Trouve ce dont tu as besoin :</h1>
+
+
+<div class= "container">
+<div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
+<% @tools.each do |tools| %>
+  
+   <div class="col">
+    <div class="card">    
+      <%= image_tag tools.pic, class:"card-img-top"%>
+      <div class="card-body">
+        <h5 class="card-title"><%= tools.title %></h5>
+        <p class="card-title"><%= tools.description %>
+        <p class="card-text"><%= tools.loaned %></p>
+        <p class="card-text"><%= tools.caution %> €</p>
+        <p class="card-text"><%= tools.condition %></p>
+        <%= link_to "Voir l'annonce", tools %>
+      </div>
+       <div class="card-footer" style="text-align:center">
+        <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
+      </div>
+    </div>
+    </div>
+<%end%>
+</div>
