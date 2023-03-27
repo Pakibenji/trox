@@ -154,7 +154,6 @@ input[type="submit"]:hover {
     width: 100%;
   }
 }
-
 #sign_in .col,
 #sign_up .col,
 #forgot_password .col {
@@ -12504,6 +12503,7 @@ section {
   font-size: 16px;
   text-decoration: none;
   margin-left: 10px;
+  F
   
 }
 
