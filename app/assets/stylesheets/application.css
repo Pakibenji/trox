@@ -12565,3 +12565,7 @@ section {
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
+
+.mapboxgl-ctrl-geocoder--input {
+  font-size: 12px; 
+}
