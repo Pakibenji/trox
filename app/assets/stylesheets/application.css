@@ -28,7 +28,6 @@
 
 #loan_button{
   background-color: #777777;
-
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -12148,7 +12147,7 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: #fd7e14;
+    color: #ff6347;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -12218,7 +12217,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: #fd7e14;
+  background: #ff6347;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -12493,9 +12492,9 @@ section {
   border: 0.5px solid lightgrey;
 }
 
+
 .bouton{
   background-color: #777777;
-
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -12509,7 +12508,6 @@ section {
 .bouton:hover {
   background-color: #ff6347;
 }
-
 .dropdown-menu {
   display: none;
 }
