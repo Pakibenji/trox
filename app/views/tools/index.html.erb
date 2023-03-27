@@ -1,6 +1,5 @@
-<%= render "/layouts/navbar"%>
 
-<p style="color: green"><%= notice %></p>
+<%= render "/layouts/navbar"%>
 
 
 <div>
@@ -9,8 +8,19 @@
 
 <h1 id="index_title">Trouve ce dont tu as besoin :</h1>
 
+<h2 class="text-center"><%= pluralize(@tools.count, "Result")%></h2>
 
-<div class= "container">
+<div>
+<%= render 'search/form' %>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+<div id="cards-container" class= "container">
 <div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
 <% @tools.each do |tools| %>
   
