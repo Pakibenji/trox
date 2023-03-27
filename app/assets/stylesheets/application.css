@@ -25,8 +25,10 @@
   color: white;
 }
 
-#loan_button {
-  background-color: #6c757d;
+
+#loan_button{
+  background-color: #777777;
+
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -35,8 +37,9 @@
   margin: 20px;
 }
 
-#loan_button:hover {
-  background-color: #fd7e14;
+
+#loan_button:hover{
+  background-color: #ff6347;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -128,7 +131,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #6c757d;
+  background-color: #777777;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -138,7 +141,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #fd7e14;
+  background-color: #ff6347;
 }
 
 .error-message {
@@ -152,7 +155,6 @@ input[type="submit"]:hover {
     width: 100%;
   }
 }
-
 #sign_in .col,
 #sign_up .col,
 #forgot_password .col {
@@ -12491,8 +12493,9 @@ section {
   border: 0.5px solid lightgrey;
 }
 
-.bouton {
-  background-color: #6c757d;
+.bouton{
+  background-color: #777777;
+
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -12504,7 +12507,7 @@ section {
 }
 
 .bouton:hover {
-  background-color: #fd7e14;
+  background-color: #ff6347;
 }
 
 .dropdown-menu {
