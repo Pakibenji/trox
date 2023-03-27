@@ -27,7 +27,7 @@
 }
 
 #loan_button{
-  background-color: #6c757d;
+  background-color: #777777;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -37,7 +37,7 @@
 }
 
 #loan_button:hover{
-  background-color: #fd7e14;
+  background-color: #ff6347;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -130,7 +130,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #6c757d;
+  background-color: #777777;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -140,7 +140,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #fd7e14;
+  background-color: #ff6347;
 }
 
 .error-message {
@@ -12494,7 +12494,7 @@ section {
 }
 
 .bouton{
-  background-color: #6c757d;
+  background-color: #777777;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -12503,14 +12503,14 @@ section {
   font-size: 16px;
   text-decoration: none;
   margin-left: 10px;
-  F
+  
   
 }
 
 .bouton:hover {
-  background-color: #fd7e14;
+  background-color: #ff6347;
 }
-=======
+
 .dropdown-menu {
   display: none;
 }
