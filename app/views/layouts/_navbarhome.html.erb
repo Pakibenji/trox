@@ -10,6 +10,7 @@
         <%= link_to "Accueil", root_path, class:"nav-link", style:"text-decoration:none" %>
         <%= link_to "Les annonces", tools_path,  class:"nav-link", style:"text-decoration:none"%>
         <%= link_to "Poster un outil",new_tool_path, class: "nav-link", style: "text-decoration:none" %>
+        <%= link_to "À propos", about_path, class:"nav-link", style:"text-decoration:none" %>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= link_to "Mon profil", current_user, class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { expanded: "false" } %>
@@ -27,9 +28,6 @@
               <%= link_to "Se connecter", new_user_session_path, class:"nav-link", style:"text-decoration:none" %>
               <%= link_to "S'inscrire", new_user_registration_path, class:"nav-link", style:"text-decoration:none" %>
             <% end %>
-          </div>
-        </div>
-      </nav>
+      </div>
     </div>
-  </div>
-</div>
+</nav>

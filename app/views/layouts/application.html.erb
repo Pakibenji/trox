@@ -18,9 +18,8 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <header>
-      
-    </header >
+    <%= render "/layouts/notice"%>
+
     <%= yield %>
     <%= yield :javascript %>
   </body>

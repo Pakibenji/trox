@@ -94,4 +94,10 @@ gem "activestorage", "~> 7.0"
 
 gem "geocoder"
 
+
 gem "ransack", "~> 3.2"
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
+
+gem "redis", "~> 5.0"
+

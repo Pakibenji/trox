@@ -9,75 +9,78 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+
+ *.
+ *= require_self
  *= require application
+
  */
 /*Show tool*/
 
-
-
-.loan_button{
+.loan_button {
   text-decoration: none;
   color: white;
 }
-.loan_button:hover{
+.loan_button:hover {
   text-decoration: none;
   color: white;
 }
+
 
 #loan_button{
-  background-color: #6c757d;
+  background-color: #777777;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; 
+  font-size: 16px;
   margin: 20px;
 }
+
 
 #loan_button:hover{
-  background-color: #fd7e14;
+  background-color: #ff6347;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; 
+  font-size: 16px;
   margin: 20px;
 }
 
-#tool_show_description{
-  margin-top:100px;
+#tool_show_description {
+  margin-top: 100px;
   text-align: center;
-
 }
-#tool_show_description .text-primary{
+#tool_show_description .text-primary {
   font-size: 20px;
   font-weight: bolder;
 }
 
-#tool_show_title{
+#tool_show_title {
   text-align: center;
 }
 
-#tool_show_list{
+#tool_show_list {
   text-align: center;
 }
 
-.tool_pic_show{
+.tool_pic_show {
   max-height: 100%;
   max-width: 100%;
   border-radius: 10px;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .tool_pic_show:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5);
   position: relative !important;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   border-radius: 10px;
 }
 /*FORMS*/
@@ -128,7 +131,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #777777;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -138,7 +141,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: #ff6347;
 }
 
 .error-message {
@@ -152,7 +155,6 @@ input[type="submit"]:hover {
     width: 100%;
   }
 }
-
 #sign_in .col,
 #sign_up .col,
 #forgot_password .col {
@@ -3163,7 +3165,7 @@ textarea.form-control.is-valid {
 .was-validated .form-select:valid:focus,
 .form-select.is-valid:focus {
   border-color: #67c29c;
-  box-shadow: 0 0 0 0.25rem rgba(103, 194, 156, 0.25);
+  box-shadow: 0 0 0 0.25rem #fd7e14;
 }
 
 .was-validated .form-check-input:valid,
@@ -3281,7 +3283,7 @@ textarea.form-control.is-invalid {
 }
 .was-validated .form-check-input:invalid:focus,
 .form-check-input.is-invalid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(161, 100, 104, 0.25);
+  box-shadow: 0 0 0 0.25rem #fd7e14;
 }
 .was-validated .form-check-input:invalid ~ .form-check-label,
 .form-check-input.is-invalid ~ .form-check-label {
@@ -4580,7 +4582,7 @@ fieldset:disabled .btn {
   list-style: none;
 }
 
-.nav-link {
+.link {
   display: block;
   padding: 0.5rem 1rem;
   color: #64a19d;
@@ -12146,7 +12148,7 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: #fd7e14;
+    color: #ff6347;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -12216,7 +12218,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: #fd7e14;
+  background: #ff6347;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -12376,7 +12378,7 @@ body {
   margin-top: 20px;
 }
 .card-style1 {
-  box-shadow: 0px 0px 10px 0px rgb(255 99 71 / 100%);
+  box-shadow: 0px 0px 10px 0px rgb(255, 99, 71);
 }
 .border-0 {
   border: 0 !important;
@@ -12487,6 +12489,26 @@ section {
   border-radius: 0.25rem !important;
 }
 
+.input-border {
+  border: 0.5px solid lightgrey;
+}
+
+
+.bouton{
+  background-color: #777777;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.bouton:hover {
+  background-color: #ff6347;
+}
 .dropdown-menu {
   display: none;
 }
@@ -12541,4 +12563,8 @@ section {
   margin: 0.5rem 0;
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  font-size: 12px; 
 }

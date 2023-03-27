@@ -23,43 +23,53 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
+  <div id="sign_up" class="container", style="text-align:center">
+    <%= form.label :title, "Titre", style: "display: block," %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div id="sign_up" class="container", style="text-align:center">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
-    <%= form.label :pic, style: "display: block" %>
-    <%= form.file_field :pic %>
+  <div class="col">
+    <%= form.label :pic,"Ajouter une image" %><br />
+    <label class="bouton", style="margin:10px">
+    Parcourir
+    <span style="display:none;">
+      <%= form.file_field :pic, id: "fileUploader"%>
+    </span>
+  </label>
   </div>
 
-
-  <div>
-  <%= form.label :location, style: "display: block" %>
+  <div id="sign_up" class="container", style="text-align:center">
+  <%= form.label :location, "Localisation", style: "display: block" %>
   <%= form.hidden_field :location, id: 'tool_location' %>
+  
+    <div id="geocoder" class="container", style="margin-left:120px"></div>
+ </div>
+ 
 
-    <div id="geocoder" class="geocoder"></div>
-  </div>
+
 
 
 
 
   <div>
+
+  <div id="sign_up" class="container", style="text-align:center">
+
     <%= form.label :caution, style: "display: block" %>
     <%= form.text_field :caution %>
   </div>
 
-  <div>
-    <%= form.label :condition, style: "display: block" %>
+  <div id="sign_up" class="container", style="text-align:center">
+    <%= form.label :condition, "Etat", style: "display: block" %>
     <%= form.text_field :condition %>
   </div>
 
-  <div>
+  <div id="sign_up" class="container", style="text-align:center">
     <%= form.submit %>
   </div>
 <% end %>
