@@ -1,10 +1,14 @@
 <%= render "/layouts/navbar"%>
-<h1>New tool</h1>
+<section id="sign_up" class="container">
+<div class="card card-style1 border-0", style="padding:50px">
+<h1 style="text-align:center">Nouvel outil</h1>
 
 <%= render "form", tool: @tool %>
 
 <br>
 
 <div>
-  <%= link_to "Back to tools", tools_path %>
+  <%= link_to "Back to tools", tools_path, class:"bouton" %>
 </div>
+</div>
+</section>
