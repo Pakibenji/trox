@@ -1,11 +1,11 @@
 <%= render "/layouts/navbar"%>
 <p style="color: green"><%= notice %></p>
-
+<section class="bg-light">
 <%= render @loan %>
 
-<div>
-  <%= link_to "Edit this loan", edit_loan_path(@loan) %> |
-  <%= link_to "Back to loans", loans_path %>
-
-  <%= button_to "Destroy this loan", @loan, method: :delete %>
+<div class="d-flex justify-content-evenly">
+  <button type="button" id="loan_button"><%= link_to "Modifier l'emprunt", edit_loan_path(@loan), class:"loan_button" %></button>
+  <%= button_to "Supprimer cet emprunt", @loan, method: :delete, class:"loan_button",id:"loan_button" %></button>
+  <button type="button" id="loan_button"><%= link_to "Retour à mes emprunts", loans_path, class:"loan_button"%></button>
 </div>
+</section>
