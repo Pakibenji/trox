@@ -1,7 +1,8 @@
+//= require jquery
+
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails";
 import "controllers";
-
 /*!
  * Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
  * Copyright 2013-2022 Start Bootstrap
