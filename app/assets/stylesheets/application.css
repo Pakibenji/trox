@@ -15,6 +15,25 @@
  *= require application
 
  */
+/*Static-page*/
+.jardin-pic{
+  width:600px;
+  height: 600px;
+  filter: grayscale()
+}
+
+.definition{
+  font-size: 20px;
+  font-style: italic;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.citation{
+  color: white;
+  font-style: italic;
+  text-align: end;
+  margin: 20px;
+}
+
 /*Form search*/
 .form_search{
   text-align: center;
