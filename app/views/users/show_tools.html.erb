@@ -1,0 +1,25 @@
+<%= render "/layouts/navbar"%>
+
+<div id="cards-container" class= "container">
+<div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
+  <% @user.tools.each do |tool| %>
+  
+   <div class="col">
+    <div class="card">    
+      <%= image_tag tool.pic, class:"card-img-top"%>
+      <div class="card-body">
+        <h5 class="card-title"><%= tool.title %></h5>
+        <p class="card-title"><%= tool.description %>
+        <p class="card-text"><%= tool.loaned %></p>
+        <p class="card-text"><%= tool.caution %> €</p>
+        <p class="card-text"><%= tool.condition %></p>
+        <%= link_to "Voir l'annonce", tool %>
+      </div>
+       <div class="card-footer" style="text-align:center">
+        <small >Annonce postée le <%= tool.created_at.strftime('%d/%m/%Y')%></small>
+      </div>
+    </div>
+    </div>
+<%end%>
+</div>
+

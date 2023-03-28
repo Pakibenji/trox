@@ -1,9 +1,23 @@
+<section class="container text-center" style="background-color: rgb(210, 210, 210);">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-4" style="padding:20px;">
 <%= search_form_for(@query, url: search_path, method: :get, class:'d-flex') do |f| %>
   <%= f.search_field :title_or_description_cont_any, 
-    placeholder: "Search tools...",
-    class: "form-control me-2" %>
+    placeholder: "  Rechercher un outil... ",
+    class: "form_search form-control me-2" %>
+    </div>
+    <div class="col-sm-4" style="padding:20px;">
   <%= f.search_field :location_cont_any, 
-    placeholder: "Search locations...",
-    class: "form-control me-2" %>
-  <%= f.submit "Search!", class:"btn btn-outline-success" %>
+    placeholder: "Localisation de l'outil...",
+    class: "form_search form-control me-2" %>
+    </div>
+    <div class="col-sm-4" style="padding:20px;">
+  <%= f.submit "Rechercher", class:"btn btn-outline-success" %>
 <% end %>
+  </div>
+  </div>
+</section>
+
+
+
+  

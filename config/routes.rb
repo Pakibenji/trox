@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     resources :tools
   end
   resources :users do
+    get 'show_tools'
+  end
+  resources :users do
     resources :image_url,  only: [:create, :destroy]
   end
   resources :tools do 
@@ -23,7 +26,6 @@ Rails.application.routes.draw do
   resources :users
 
   get 'about', to: 'static_pages#about'
-  get 'contact', to: 'static_pages#contact'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
