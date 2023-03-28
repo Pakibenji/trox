@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     resources :tools
   end
   resources :users do
+    get 'show_tools'
+  end
+  resources :users do
     resources :image_url,  only: [:create, :destroy]
   end
   resources :tools do 
