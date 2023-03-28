@@ -2,6 +2,7 @@ class LoansController < ApplicationController
   before_action :set_loan, only: %i[ show edit update destroy ]
   before_action :set_tool, only: [:new, :create]
   before_action :check_loan_status, only: [:new, :create]
+  before_action :users_tool, only: [:new, :create]
 
 
   # GET /loans or /loans.json
@@ -77,7 +78,13 @@ class LoansController < ApplicationController
   
     def check_loan_status
       if @tool.loaned?
-        redirect_to tools_path, notice: "Cet outil est déjà loué."
+        redirect_to tools_path, notice: "Cet outil est déjà emprunté."
+      end
+    end
+
+    def users_tool
+      if current_user.id == @tool.user.id
+        redirect_to tools_path, notice: "Vous ne pouvez pas emprunter votre propre outil."
       end
     end
 end
