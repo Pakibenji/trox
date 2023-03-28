@@ -55,6 +55,24 @@
 .form_search{
   text-align: center;
 }
+#search_button{
+  text-decoration: none;
+  color: white;
+  background-color: #777777;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#search_button:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;;
+}
 
 /*Show tool*/
 
@@ -65,6 +83,11 @@
 .loan_button:hover {
   text-decoration: none;
   color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;;
 }
 
 
