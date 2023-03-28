@@ -20,12 +20,12 @@
 
   <div class="col">
     <%= f.label :firstname,"Prénom" %><br />
-    <%= f.text_field :firstname, minlength: 2, autofocus: true, required: true, minlength: 2,style:"width: 100%;height:50px; border-radius:4px; text-align:center;" %>
+    <%= f.text_field :firstname, minlength: 2, autofocus: true, required: true, minlength: 2, style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
   </div>
 
   <div class="col">
     <%= f.label :lastname, "Nom" %><br />
-    <%= f.text_field :lastname, autofocus: true,  required: true,style:"width: 100%;height:50px; border-radius:4px; text-align:center;" %>
+    <%= f.text_field :lastname, autofocus: true,  required: true, style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
   </div>
 
   <div class="col">
@@ -35,12 +35,12 @@
 
   <div class="col">
     <%= f.label :address, "Adresse" %><br />
-    <%= f.text_field :address, autofocus: true,  required: true,style:"width: 100%;height:50px; border-radius:4px; text-align:center;" %>
+    <%= f.text_field :address, autofocus: true,  required: true, style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
   </div>
 
   <div class="col">
     <%= f.label :address_complement, "Complément d'adresse" %><br />
-    <%= f.text_field :address_complement, autofocus: true,style:"width: 100%;height:50px; border-radius:4px; text-align:center;" %>
+    <%= f.text_field :address_complement, autofocus: true, style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
   </div>
 
   <div class="col">
