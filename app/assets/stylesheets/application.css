@@ -16,6 +16,24 @@
 
  */
 /*Static-page*/
+
+
+
+#phrasetrox{
+  margin: 0.0.5rem;
+
+  animation: zoomIn;
+  animation-duration: 2s;
+}
+
+.titretrox {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
 .jardin-pic{
   width:600px;
   height: 600px;

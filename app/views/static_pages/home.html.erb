@@ -3,8 +3,8 @@
   <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
     <div class="d-flex justify-content-center">
       <div class="text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Trox</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">Prêt d'outils entre particuliers</h2>
+        <h1 class="titretrox">TROX</h1>
+        <h2 id="phrasetrox" class="text-white-50 mx-auto mt-2 mb-5">Prêt d'outils entre particuliers</h2>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
   <section class="projects-section bg-light" id="projects">
     <div class="container px-4 px-lg-5">
       <!-- Featured Project Row-->
-      <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+      <div data-aos="fade-left" class="row gx-0 mb-4 mb-lg-5 align-items-center">
         <div class="col-xl-8 col-lg-7"><img class="jardin-pic img-fluid mb-3 mb-lg-0" src="https://bricotrend.com/wp-content/uploads/2020/05/B%C3%A9tonni%C3%A8re3407.jpg" alt="..." /></div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
@@ -114,6 +114,13 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://kit.fontawesome.com/ea4bd2612a.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
 </body>
 </html>
 <style>
