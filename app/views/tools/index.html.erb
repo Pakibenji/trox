@@ -1,22 +1,18 @@
 
 <%= render "/layouts/navbar"%>
 
-
-<div>
-<%= render "mapbox" %>
-</div>
-
 <h1 id="index_title">Trouve ce dont tu as besoin :</h1>
 
-<h2 class="text-center" style="margin-bottom: 20px;"><%= pluralize(@tools.count, "annonces")%></h2>
-
 <div>
-<%= render 'search/form' %>
+<div><%= render "mapbox" %></div>
+<div><%= render 'search/form' %></div>
 </div>
 
 <br>
 <br>
 <br>
+
+<h2 class="text-center" style="margin-bottom: 20px;"><%= pluralize(@tools.count, "annonces")%></h2>
 
 
 
