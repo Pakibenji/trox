@@ -12330,7 +12330,7 @@ body {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.25rem solid #ff6347;
 }
 .contact-section .card h4,
 .contact-section .card .h4 {
@@ -12366,7 +12366,7 @@ body {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .inf-content {
@@ -12401,7 +12401,7 @@ body {
 }
 
 section {
-  padding: 120px 0;
+  padding: 0px 0;
   overflow: hidden;
   background: #fff;
 }
