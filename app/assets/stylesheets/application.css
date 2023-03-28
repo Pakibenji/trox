@@ -15,9 +15,10 @@
  *= require application
 
  */
-/*Edit user*/
-
-
+/*Form search*/
+.form_search{
+  text-align: center;
+}
 
 /*Show tool*/
 
