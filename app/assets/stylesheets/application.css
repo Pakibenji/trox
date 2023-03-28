@@ -6531,6 +6531,7 @@ fieldset:disabled .btn {
     height: 100%;
     margin: 0;
   }
+  
   .modal-fullscreen-xxl-down .modal-content {
     height: 100%;
     border: 0;
@@ -12635,3 +12636,13 @@ section {
 .mapboxgl-ctrl-geocoder--input {
   font-size: 15px; 
 }
+#map-container{
+  height: 50vw;
+  width: 100%;
+}
+#map {
+  position:relative;
+  height: inherit;
+  width: inherit;
+ 
+  }
