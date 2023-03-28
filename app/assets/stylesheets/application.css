@@ -15,7 +15,12 @@
  *= require application
 
  */
+/*Edit user*/
+
+
+
 /*Show tool*/
+
 .loan_button {
   text-decoration: none;
   color: white;
@@ -25,8 +30,9 @@
   color: white;
 }
 
-#loan_button {
-  background-color: #6c757d;
+
+#loan_button{
+  background-color: #777777;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -35,8 +41,9 @@
   margin: 20px;
 }
 
-#loan_button:hover {
-  background-color: #fd7e14;
+
+#loan_button:hover{
+  background-color: #ff6347;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -128,7 +135,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #6c757d;
+  background-color: #777777;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -138,7 +145,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #fd7e14;
+  background-color: #ff6347;
 }
 
 .error-message {
@@ -152,7 +159,6 @@ input[type="submit"]:hover {
     width: 100%;
   }
 }
-
 #sign_in .col,
 #sign_up .col,
 #forgot_password .col {
@@ -12146,7 +12152,7 @@ body {
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: #fd7e14;
+    color: #ff6347;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -12216,7 +12222,7 @@ body {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: #fd7e14;
+  background: #ff6347;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -12491,8 +12497,9 @@ section {
   border: 0.5px solid lightgrey;
 }
 
-.bouton {
-  background-color: #6c757d;
+
+.bouton{
+  background-color: #777777;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -12504,9 +12511,8 @@ section {
 }
 
 .bouton:hover {
-  background-color: #fd7e14;
+  background-color: #ff6347;
 }
-
 .dropdown-menu {
   display: none;
 }
@@ -12542,12 +12548,12 @@ section {
 .navbar-nav .dropdown-menu a:hover,
 .navbar-nav .dropdown-menu a:focus {
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #ff6347;
 }
 
 .navbar-nav .dropdown-menu a.active {
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #ff6347;
 }
 
 .navbar-nav .dropdown-item.disabled,
@@ -12561,4 +12567,8 @@ section {
   margin: 0.5rem 0;
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  font-size: 12px; 
 }

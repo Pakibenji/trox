@@ -1,4 +1,6 @@
+<header>
 <%= render "/layouts/navbar"%>
+</header>
 <section class="bg-light">
   <div class="container">
     <div class="row">
@@ -38,9 +40,11 @@
         </div>
       </div>
     </div>
-    <button type="button" id="btn-edit">
-      <%= link_to "Modifier profil", edit_user_registration_path, class:"btn-edit"%>
+    <div class="d-flex justify-content-evenly">
+    <button type="button" id="loan_button">
+      <%= link_to "Modifier mon profil", edit_user_registration_path, class:"loan_button"%>
     </button>
+    </div>
   </div>
 </div>
 </div>
