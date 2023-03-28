@@ -7,6 +7,11 @@ class Loan < ApplicationRecord
     after_create :mark_tool_as_loaned
     before_create :loaned_true_or_false
     after_destroy :mark_tool_as_false
+    after_create :loan_send
+
+    def loan_send
+      UserMailer.loan_email(self).deliver_now
+    end
 
     private
 

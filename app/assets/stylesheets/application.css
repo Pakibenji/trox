@@ -15,7 +15,32 @@
  *= require application
 
  */
+/*Static-page*/
+.jardin-pic{
+  width:600px;
+  height: 600px;
+  filter: grayscale()
+}
+
+.definition{
+  font-size: 20px;
+  font-style: italic;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.citation{
+  color: white;
+  font-style: italic;
+  text-align: end;
+  margin: 20px;
+}
+
+/*Form search*/
+.form_search{
+  text-align: center;
+}
+
 /*Show tool*/
+
 .loan_button {
   text-decoration: none;
   color: white;
@@ -12326,7 +12351,7 @@ body {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.25rem solid #ff6347;
 }
 .contact-section .card h4,
 .contact-section .card .h4 {
@@ -12362,7 +12387,7 @@ body {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .inf-content {
@@ -12397,7 +12422,7 @@ body {
 }
 
 section {
-  padding: 120px 0;
+  padding: 5em 0;
   overflow: hidden;
   background: #fff;
 }
@@ -12546,12 +12571,12 @@ section {
 .navbar-nav .dropdown-menu a:hover,
 .navbar-nav .dropdown-menu a:focus {
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #ff6347;
 }
 
 .navbar-nav .dropdown-menu a.active {
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #ff6347;
 }
 
 .navbar-nav .dropdown-item.disabled,

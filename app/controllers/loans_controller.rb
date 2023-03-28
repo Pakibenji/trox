@@ -1,8 +1,10 @@
 class LoansController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_loan, only: %i[ show edit update destroy ]
   before_action :set_tool, only: [:new, :create]
   before_action :check_loan_status, only: [:new, :create]
-
+  before_action :users_tool, only: [:new, :create]
+  before_action :only_borrower_and_owner, only: [:edit, :update, :destroy]
 
   # GET /loans or /loans.json
   def index
@@ -21,6 +23,8 @@ class LoansController < ApplicationController
 
   # GET /loans/1/edit
   def edit
+    @tool = @loan.tool
+    @loan.user = current_user
   end
 
   # POST /loans or /loans.json
@@ -39,9 +43,12 @@ class LoansController < ApplicationController
 
   # PATCH/PUT /loans/1 or /loans/1.json
   def update
+    @tool = Tool.find(params[:tool_id])
+    @loan.tool = @tool
+    @loan.user = current_user
     respond_to do |format|
       if @loan.update(loan_params)
-        format.html { redirect_to loan_url(@loan), notice: "Loan was successfully updated." }
+        format.html { redirect_to loan_url(@loan), notice: "L'emprunt à bien été modifié" }
         format.json { render :show, status: :ok, location: @loan }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -77,7 +84,20 @@ class LoansController < ApplicationController
   
     def check_loan_status
       if @tool.loaned?
-        redirect_to tools_path, notice: "Cet outil est déjà loué."
+        redirect_to tools_path, notice: "Cet outil est déjà emprunté."
       end
     end
+
+    def users_tool
+      if current_user.id == @tool.user.id
+        redirect_to tools_path, notice: "Vous ne pouvez pas emprunter votre propre outil."
+      end
+    end
+    
+    def only_borrower_and_owner
+      if current_user.id != @loan.user.id && current_user.id != @loan.tool.user.id
+        redirect_to tools_path, notice: "Vous n'êtes pas autorisé à modifier cet emprunt."
+      end
+    end
+
 end

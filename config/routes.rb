@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'search', to: 'search#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
 
   resources :users do 
     resources :tools
+  end
+  resources :users do
+    get 'show_tools'
   end
   resources :users do
     resources :image_url,  only: [:create, :destroy]
@@ -22,7 +26,6 @@ Rails.application.routes.draw do
   resources :users
 
   get 'about', to: 'static_pages#about'
-  get 'contact', to: 'static_pages#contact'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")

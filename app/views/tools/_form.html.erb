@@ -3,6 +3,7 @@
     <div class="column" style="background-color:#aaa;">
       <div id="map" data-markers="<%= @markers.to_json %>"></div>
     </div>
+
     <div class="column" style="background-color:#bbb;">
       <%= form_with(model: tool) do |form| %>
         <% if tool.errors.any? %>
@@ -51,3 +52,4 @@
         <% end %>
       </div>
     </div>
+
