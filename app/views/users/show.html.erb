@@ -10,7 +10,7 @@
             <div class="row align-items-center">
               <div class="col-lg-6 mb-4 mb-lg-0">
                 <%if @user.image_url.attached?%>
-                <%= image_tag @user.image_url %>
+                <%= image_tag @user.image_url, style:"height:17em" %>
                 <%else%>
                 <%= image_tag "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}?s=200&d=mm" %>
                 <%end%>

@@ -150,8 +150,10 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
-  resize: none;
+  /*margin-bottom: 10px;*/
+  /*resize: none;*/
+  text-align: center;
+  height: 50px;
 }
 
 input[type="submit"] {
@@ -12532,6 +12534,7 @@ section {
 
 .bouton:hover {
   background-color: #ff6347;
+  color: #fff;
 }
 .dropdown-menu {
   display: none;
@@ -12590,5 +12593,5 @@ section {
 }
 
 .mapboxgl-ctrl-geocoder--input {
-  font-size: 12px; 
+  font-size: 15px; 
 }
