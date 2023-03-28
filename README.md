@@ -59,7 +59,7 @@
     <p>Notre équipe est composée de 5 membres :</p>
       <ul>
         <li>Benjamin Alcade</li>
-        <li>Pierrick Cadoret></li>
+        <li>Pierrick Cadoret</li>
         <li>Maxime Gillot</li>
         <li>Éric Castets</li>
         <li>Julien Dast</li>
