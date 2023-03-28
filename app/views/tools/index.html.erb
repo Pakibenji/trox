@@ -15,14 +15,14 @@
   
    <div class="col">
     <div class="card">    
-      <%= image_tag tools.pic, class:"card-img-top"%>
+      <%= image_tag tools.pic, class:"card-img-top",style:"height:30em;"%>
       <div class="card-body">
         <h5 class="card-title"><%= tools.title %></h5>
         <p class="card-title"><%= tools.description %>
         <p class="card-text"><%= tools.loaned %></p>
         <p class="card-text"><%= tools.caution %> €</p>
         <p class="card-text"><%= tools.condition %></p>
-        <%= link_to "Voir l'annonce", tools %>
+        <%= button_to "Voir l'annonce", tools,id:"loan_button", class:"loan_button" %>
       </div>
        <div class="card-footer" style="text-align:center">
         <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
