@@ -21,7 +21,8 @@
                 </li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Montant de la caution :</span><%=@tool.caution%> €</li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Etat de l'outil :</span><%=@tool.condition%></li>
-                <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Annonce déposée le :</span><%=@tool.created_at.strftime('%d/%m/%Y') %></li>
+                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Localisation :</span><%=@tool.location%></li>
+                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Annonce déposée le :</span><%=@tool.created_at.strftime('%d/%m/%Y') %></li>
                 <button id="loan_button"><%= link_to "Emprunter l'outil", new_tool_loan_path(@tool), class:"loan_button"%></button>
               </ul>
             </div>
