@@ -12651,11 +12651,11 @@ section {
 .mapboxgl-ctrl-geocoder--input {
   font-size: 15px; 
 }
-#map-container{
-  height: 50vw;
+#cart-container{
+  height: 30vw;
   width: 100%;
 }
-#map {
+#cart {
   position:relative;
   height: inherit;
   width: inherit;
