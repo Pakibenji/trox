@@ -15,9 +15,23 @@
  *= require application
 
  */
+/*Results*/
+
+
+#title_results{
+  margin: 30px;
+  color: #ff6347;
+}
+
+#back_to_annonces{
+  text-align: center;
+  text-decoration: none !important;
+  width: 100%;
+  margin: 10px;
+}
+
+
 /*Static-page*/
-
-
 
 #phrasetrox{
   margin: 0.0.5rem;
