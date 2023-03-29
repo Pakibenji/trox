@@ -4824,6 +4824,7 @@ fieldset:disabled .btn {
 }
 .navbar-toggler:hover {
   text-decoration: none;
+ 
 }
 .navbar-toggler:focus {
   text-decoration: none;
@@ -12232,7 +12233,7 @@ body {
     color: #ff6347;
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: gray;
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -12662,3 +12663,4 @@ section {
   }
 
 .obligatoire {color: red;}
+
