@@ -6,27 +6,27 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="col">
-    <%= f.label :firstname, "Prénom" %><br />
+    <%= f.label :firstname, "Prénom" %><span class="obligatoire">*</span><br />
     <%= f.text_field :firstname, required: true, minlength: 2, autofocus: true, autocomplete: "Prénom", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
   </div>
     
   <div class="col">
-    <%= f.label :lastname, "Nom" %><br />
+    <%= f.label :lastname, "Nom" %><span class="obligatoire">*</span><br />
     <%= f.text_field :lastname, required: true, autofocus: true, autocomplete: "Nom", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
   </div>
   
   <div class= "col">
-    <%= f.label :email, "Email" %><br />
+    <%= f.label :email, "Email" %><span class="obligatoire">*</span><br />
     <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
 
   <div class= "col">
-  <%= f.label :phone, "Numéro de téléphone" %><br />
+  <%= f.label :phone, "Numéro de téléphone" %><span class="obligatoire">*</span><br />
   <%= f.telephone_field :phone, autofocus: true, required: true, autocomplete: "Téléphone", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
   </div>
    
   <div class= "col">
-    <%= f.label :address, "Adresse" %><br />
+    <%= f.label :address, "Adresse" %><span class="obligatoire">*</span><br />
     <%= f.text_field :address, autofocus: true, required: true, autocomplete: "Adresse", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
   </div>
    
@@ -36,12 +36,12 @@
   </div>
 
   <div class= "col">
-    <%= f.label :postcode, "Code postal" %><br />
+    <%= f.label :postcode, "Code postal" %><span class="obligatoire">*</span><br />
     <%= f.number_field :postcode, in: 10000..99999 ,required: true, autofocus: true, autocomplete: "Code postal", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
     
   <div class= "col">
-    <%= f.label :password, "Mot de passe" %>
+    <%= f.label :password, "Mot de passe" %><span class="obligatoire">*</span>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> caractères minimum)</em>
     <% end %><br />
@@ -49,7 +49,7 @@
   </div>
    
   <div class= "col">
-    <%= f.label :password, "Confirmation du mot de passe" %>
+    <%= f.label :password, "Confirmation du mot de passe" %><span class="obligatoire">*</span>
     <% if @minimum_password_length %>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "Nouveau mot de passe", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
