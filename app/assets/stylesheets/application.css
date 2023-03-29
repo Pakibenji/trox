@@ -15,9 +15,63 @@
  *= require application
 
  */
+/*Static-page*/
+
+
+
+#phrasetrox{
+  margin: 0.0.5rem;
+
+  animation: zoomIn;
+  animation-duration: 2s;
+}
+
+.titretrox {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.jardin-pic{
+  width:600px;
+  height: 600px;
+}
+
+.definition{
+  font-size: 20px;
+  font-style: italic;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.citation{
+  color: white;
+  font-style: italic;
+  text-align: end;
+  margin: 20px;
+}
+
 /*Form search*/
 .form_search{
   text-align: center;
+}
+#search_button{
+  text-decoration: none;
+  color: white;
+  background-color: #777777;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#search_button:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;;
 }
 
 /*Show tool*/
@@ -29,6 +83,11 @@
 .loan_button:hover {
   text-decoration: none;
   color: white;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;;
 }
 
 
@@ -131,8 +190,10 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
-  resize: none;
+  /*margin-bottom: 10px;*/
+  /*resize: none;*/
+  text-align: center;
+  height: 50px;
 }
 
 input[type="submit"] {
@@ -6470,6 +6531,7 @@ fieldset:disabled .btn {
     height: 100%;
     margin: 0;
   }
+  
   .modal-fullscreen-xxl-down .modal-content {
     height: 100%;
     border: 0;
@@ -12513,6 +12575,7 @@ section {
 
 .bouton:hover {
   background-color: #ff6347;
+  color: #fff;
 }
 .dropdown-menu {
   display: none;
@@ -12571,5 +12634,15 @@ section {
 }
 
 .mapboxgl-ctrl-geocoder--input {
-  font-size: 12px; 
+  font-size: 15px; 
 }
+#map-container{
+  height: 50vw;
+  width: 100%;
+}
+#map {
+  position:relative;
+  height: inherit;
+  width: inherit;
+ 
+  }

@@ -4,9 +4,7 @@
 
 <div class="d-flex justify-content-evenly">
   <button type="button" id="loan_button"><%= link_to "Retour aux outils", tools_path, class:"loan_button" %></button>
-  <% if current_user.id == @tool.user_id %>
   <%= button_to "Supprimer l'annonce", @tool, method: :delete, class:"loan_button",id:"loan_button", data: { turbo_method: :delete } %></button>
   <button type="button" id="loan_button"><%= link_to "Modifier l'annonce", edit_tool_path(@tool), class:"loan_button"%></button>
 </div>
-<% end %>
 </section>

@@ -1,22 +1,27 @@
 
 <%= render "/layouts/navbar"%>
 
-
-<div>
-<%= render "mapbox" %>
-</div>
-
 <h1 id="index_title">Trouve ce dont tu as besoin :</h1>
+<div class="row">
+    <div class="col-8 mx-auto offset-3">
+        <div class="card mb-3">
+          <div class="card-body mb-4">
+            <div id="map-container">
+              <div id="map">
+<div><%= render "mapbox" %></div>
+</div>
+  </div>
+    </div>
+      </div>
+        <div><%= render 'search/form' %></div>
+        </div>
+          </div>
+
+<br>
+<br>
+<br>
 
 <h2 class="text-center" style="margin-bottom: 20px;"><%= pluralize(@tools.count, "annonces")%></h2>
-
-<div>
-<%= render 'search/form' %>
-</div>
-
-<br>
-<br>
-<br>
 
 
 
@@ -26,14 +31,16 @@
   
    <div class="col">
     <div class="card">    
-      <%= image_tag tools.pic, class:"card-img-top"%>
+      <%= image_tag tools.pic, class:"card-img-top",style:"height:30em;"%>
       <div class="card-body">
         <h5 class="card-title"><%= tools.title %></h5>
         <p class="card-title"><%= tools.description %>
         <p class="card-text"><%= tools.loaned %></p>
         <p class="card-text"><%= tools.caution %> €</p>
         <p class="card-text"><%= tools.condition %></p>
-        <%= link_to "Voir l'annonce", tools %>
+
+        <%= link_to "Voir l'annonce", tools ,id:"loan_button", class:"loan_button" %>
+
       </div>
        <div class="card-footer" style="text-align:center">
         <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>

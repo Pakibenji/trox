@@ -375,11 +375,8 @@ DEPENDENCIES
   pry (~> 0.14.2)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
-
   ransack (~> 3.2)
-
   redis (~> 5.0)
-
   rspec (~> 3.12)
   rspec-rails (~> 6.0)
   sass-rails

@@ -3,8 +3,8 @@
   <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
     <div class="d-flex justify-content-center">
       <div class="text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Trox</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">Prêt d'outils entre particuliers</h2>
+        <h1 class="titretrox">TROX</h1>
+        <h2 id="phrasetrox" class="text-white-50 mx-auto mt-2 mb-5">Prêt d'outils entre particuliers</h2>
       </div>
     </div>
   </div>
@@ -13,12 +13,12 @@
   <section class="projects-section bg-light" id="projects">
     <div class="container px-4 px-lg-5">
       <!-- Featured Project Row-->
-      <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-        <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A2PA5835PT17X18Y90D183127005W27589H15769/views/1,width=550,height=550,appearanceId=2,backgroundColor=000000,noPt=true/cadeau-bricolage-bricolo-bricoleur-meuble-t-shirt-homme.jpg" alt="..." /></div>
+      <div data-aos="fade-left" class="row gx-0 mb-4 mb-lg-5 align-items-center">
+        <div class="col-xl-8 col-lg-7"><img class="jardin-pic img-fluid mb-3 mb-lg-0" src="https://bricotrend.com/wp-content/uploads/2020/05/B%C3%A9tonni%C3%A8re3407.jpg" alt="..." /></div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4>Je savais pas quoi mettre</h4>
-            <p class="text-black-50 mb-0">Trox, est un site imaginé et développé avec les notions de partage, N'oubliez jamais, que personne n'a le niveau de maxime en FRONTEND </p>
+            <h4>Troxez vos outils</h4>
+            <p class="text-black-50 mb-0" style="text-align : justify">Oui, vous devez absolument terminer vos travaux aujourd'hui. Oui, nous sommes dimanche et votre magasin de location est évidemment fermé. Oui, vous ne voulez pas dépenser une fortune pour une machine qui vous servira une seule fois. Oui, Trox est fait pour vous !</p>
           </div>
         </div>
       </div>
@@ -29,8 +29,9 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">L'entraide</h4>
-                <p class="mb-0 text-white-50">Vous aidez, quelqu'un vous aidera, sauf éric..</p>
+                <h4 class="text-white" style="font-style : italic;">L'entraide</h4>
+                <p class="mb-0 text-white-50"><span class="definition">n.f.</span> Action de s'entraider ; aide qu'on se porte mutuellement.</p>
+                <blockquote class="citation"><span class="definition">“</span>Il se faut entraider, c'est la loi de nature.<span class="definition">„</span><br>Jean de La Fontaine, Fables, l'Âne et le Chien</blockquote>
                 <hr class="d-none d-lg-block mb-0 ms-0" />
               </div>
             </div>
@@ -44,8 +45,9 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Totalement gratuit</h4>
-                <p class="mb-0 text-white-50"> Un message, une caution et vous n'avez besoin de rien d'autre.</p>
+                <h4 class="text-white"style="font-style : italic;">L'échange</h4>
+                <p class="mb-0 text-white-50"><span class="definition">n.m.</span> Action de s'adresser, de s'envoyer réciproquement des choses (objets matériels, services...).</p>
+                <blockquote class="citation"><span class="definition">“</span>Le don est échange de vie ; et la vie, échange de don.<span class="definition">„</span><br>Paul Zumthor, La Fête des fous</blockquote>
                 <hr class="d-none d-lg-block mb-0 me-0" />
               </div>
             </div>
@@ -75,7 +77,7 @@
               <i class="fas fa-envelope text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Email</h4>
               <hr class="my-4 mx-auto" />
-              <div class="small text-black-50"><a href="mailto:support@trox.fly.com">Contacter nous par ici</a></div>
+              <div class="small text-black-50"><a href="mailto:support@trox.fly.com">Contactez-nous par ici</a></div>
             </div>
           </div>
         </div>
@@ -91,8 +93,8 @@
         </div>
       </div>
     </div>
-    <div class="social d-flex flex-column align-items-center"">
-      <h4 style="color: #ff6347;">Rejoignez nous sur Github</h4>
+    <div class="social d-flex flex-column align-items-center">
+      <h4 style="color: #ff6347; margin-bottom: 50px;">Rejoignez-nous sur Github</h4>
       <a class="mx-2" href="https://github.com/Pakibenji/trox"><i class="fa-brands fa-github"></i></a>
     </div>
   </div>
@@ -112,6 +114,13 @@
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 <script src="https://kit.fontawesome.com/ea4bd2612a.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
 </body>
 </html>
 <style>
