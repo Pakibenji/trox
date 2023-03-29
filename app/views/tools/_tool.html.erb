@@ -3,7 +3,7 @@
     <div class="col-lg-12 mb-4 mb-sm-5">
       <div class="card card-style1 border-0">
         <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-          <div class="row align-items-center">
+          <div class="row align-items-center text-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
               <%= image_tag @tool.pic, class:"tool_pic_show", style: "height:17em"%>
             </div>
@@ -13,11 +13,11 @@
               </div>
               <ul class="list-unstyled mb-1-9" id="tool_show_list">
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Actuellement disponible :</span>
-                <% if @tool.loaned === true %>
-                ❌
-                <%else%>
-                ✅
-                <%end%>
+                  <% if @tool.loaned === true %>
+                    ❌
+                  <%else%>
+                    ✅
+                  <%end%>
                 </li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Montant de la caution :</span><%=@tool.caution%> €</li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Etat de l'outil :</span><%=@tool.condition%></li>
@@ -39,4 +39,3 @@
     </div>
   </div>
 </div>
-
