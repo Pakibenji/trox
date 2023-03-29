@@ -16,7 +16,7 @@
             <%= link_to "Mon profil", current_user, class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { expanded: "false" } %>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <%= link_to "Mes Outils",user_show_tools_path(current_user.id), class: "dropdown-item", style: "text-decoration:none" %>
+                <%= link_to "Mes outils",user_show_tools_path(current_user.id), class: "dropdown-item", style: "text-decoration:none" %>
               </li>
               <li>
                 <%= link_to "Mes emprunts",loans_path, class: "dropdown-item", style: "text-decoration:none" %>
