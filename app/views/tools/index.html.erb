@@ -19,25 +19,34 @@
 <br>
 <h2 class="text-center" style="margin-bottom: 20px;"><%= pluralize(@tools.count, "annonce")%></h2>
 <div id="cards-container" class= "container">
-  <div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
-    <% @tools.each do |tools| %>
-      <div class="col">
-        <div class="card">
-          <%= image_tag tools.pic, class:"card-img-top",style:"height:30em;"%>
-          <div class="card-body">
-            <h5 class="card-title"><%= tools.title %></h5>
-            <p class="card-title"><%= tools.description %>
-              <p class="card-text"><%= tools.loaned %></p>
-              <p class="card-text"><%= tools.caution %> €</p>
-              <p class="card-text"><%= tools.condition %></p>
-              <%= link_to "Voir l'annonce", tools ,id:"loan_button", class:"loan_button" %>
-            </div>
-            <div class="card-footer" style="text-align:center">
-              <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
-            </div>
-          </div>
-        </div>
-      <%end%>
+
+<div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
+<% @tools.each do |tools| %>
+  
+   <div class="col">
+    <div class="card">    
+      <%= image_tag tools.pic, class:"card-img-top",style:"height:30em;"%>
+      <div class="card-body">
+        <h5 class="card-title"><%= tools.title %></h5>
+        <p class="card-title"><%= tools.description %>
+        <p class="card-text">Actuellement disponible :</span>
+          <% if tools.loaned === true %>
+          ❌
+          <%else%>
+          ✅
+          <%end%>
+        </p>
+        <p class="card-text">Caution :<%= tools.caution %> €</p>
+        <p class="card-text">Etat de l'outil : <%= tools.condition %></p>
+
+        <%= link_to "Voir l'annonce", tools ,id:"loan_button", class:"loan_button" %>
+
+      </div>
+       <div class="card-footer" style="text-align:center">
+        <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
+      </div>
+    </div>
+
     </div>
   </div>
 </div>
