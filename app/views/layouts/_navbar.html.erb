@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
-        <%= link_to "Accueil", root_path, class:"nav-link", style:"text-decoration:none" %>
+        <%= link_to "Accueil", root_path, class:"nav-link", style:"text-decoration:none;" %>
         <%= link_to "Les annonces", tools_path,  class:"nav-link", style:"text-decoration:none"%>
         <%= link_to "Déposer une annonce",new_tool_path, class: "nav-link", style: "text-decoration:none" %>
         <% if user_signed_in? %>

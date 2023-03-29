@@ -5,12 +5,12 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="col" >
-    <%= f.label :email, "Adresse email" %><br />
+    <%= f.label :email, "Adresse email" %><span class="obligatoire">*</span><br />
     <%= f.email_field :email , autofocus: true,class: "text", autocomplete: "email", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
   </div>
 
   <div class="col" >
-    <%= f.label :password, "Mot de passe" %><br />
+    <%= f.label :password, "Mot de passe" %><span class="obligatoire">*</span><br />
     <%= f.password_field :password, class:"text", autocomplete: "current-password", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
   </div>
 
