@@ -24,7 +24,7 @@ class LoansController < ApplicationController
   # GET /loans/1/edit
   def edit
     @tool = @loan.tool
-    @loan.user = current_user
+    @loan = Loan.find(params[:id])
   end
 
   # POST /loans or /loans.json
@@ -43,9 +43,6 @@ class LoansController < ApplicationController
 
   # PATCH/PUT /loans/1 or /loans/1.json
   def update
-    @tool = Tool.find(params[:tool_id])
-    @loan.tool = @tool
-    @loan.user = current_user
     respond_to do |format|
       if @loan.update(loan_params)
         format.html { redirect_to loan_url(@loan), notice: "L'emprunt à bien été modifié" }
