@@ -16,7 +16,9 @@
 
  */
 /*Results*/
-
+#index_tools{
+  overflow-x: hidden;
+}
 
 #title_results{
   margin: 30px;

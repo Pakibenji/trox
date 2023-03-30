@@ -1,3 +1,4 @@
+<section id="index_tools">
 <%= render "/layouts/navbar"%>
 <h1 id="index_title">Trouve ce dont tu as besoin :</h1>
 <div class="row">
@@ -20,7 +21,7 @@
 <h2 class="text-center" style="margin-bottom: 20px;"><%= pluralize(@tools.count, "annonce")%></h2>
 <div id="cards-container" class= "container">
 
-<div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
+<div id="cards" class="row row-cols-1 row-cols-md-3 g-4" style="margin-bottom:100px;">
 <% @tools.each do |tools| %>
   
    <div class="col">
@@ -51,3 +52,4 @@
   </div>
  
 </div>
+</section>
