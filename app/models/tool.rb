@@ -2,7 +2,7 @@ class Tool < ApplicationRecord
     belongs_to :user
     has_one :loan
     has_one_attached :pic
-    validates :title, presence: true, length: {maximum: 30, too_long:"%{count} caractères autorisés pour le titre" }
+    validates :title, presence: true, length: {maximum: 30, too_long:"%{count} caractères autorisés pour le titre" }, format: { with: /((\w+\s?-?\w+)(,|\z))/i, message: "Pas de caractères spéciaux dans le titre"}
     validates :description, presence: true, length: { maximum: 500, too_long: "%{count} caractères autorisés pour la description" }
     validates :pic, presence: true 
     validates :location, presence: true

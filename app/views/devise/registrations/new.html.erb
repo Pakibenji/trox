@@ -7,17 +7,17 @@
 
   <div class="col">
     <%= f.label :firstname, "Prénom" %><span class="obligatoire">*</span><br />
-    <%= f.text_field :firstname, required: true, minlength: 2, autofocus: true, autocomplete: "Prénom", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
+    <%= f.text_field :firstname, required: true, minlength: 2, maxlength: 15, autofocus: true, autocomplete: "Prénom", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
   </div>
     
   <div class="col">
     <%= f.label :lastname, "Nom" %><span class="obligatoire">*</span><br />
-    <%= f.text_field :lastname, required: true, autofocus: true, autocomplete: "Nom", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
+    <%= f.text_field :lastname, required: true, autofocus: true, minlength: 2, maxlength: 15, autocomplete: "Nom", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
   </div>
   
   <div class= "col">
     <%= f.label :email, "Email" %><span class="obligatoire">*</span><br />
-    <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
+    <%= f.email_field :email, autofocus: true, required: true, autocomplete: "email", maxlength: 50, style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
 
   <div class= "col">
@@ -27,12 +27,12 @@
    
   <div class= "col">
     <%= f.label :address, "Adresse" %><span class="obligatoire">*</span><br />
-    <%= f.text_field :address, autofocus: true, required: true, autocomplete: "Adresse", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
+    <%= f.text_field :address, autofocus: true, minlength: 2, maxlength:75, required: true, autocomplete: "Adresse", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border" %>
   </div>
    
   <div class= "col">
     <%= f.label :address_complement, "Complément d'adresse" %><br />
-    <%= f.text_field :address_complement, autofocus: true, autocomplete: "Complément d'adresse", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
+    <%= f.text_field :address_complement, autofocus: true, minlength: 2, maxlength: 50, autocomplete: "Complément d'adresse", style:"width: 100%;height:50px; border-radius:4px; text-align:center;",class: "input-border"%>
   </div>
 
   <div class= "col">
@@ -52,7 +52,7 @@
     <%= f.label :password, "Confirmation du mot de passe" %><span class="obligatoire">*</span>
     <% if @minimum_password_length %>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "Nouveau mot de passe", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border" %>
+    <%= f.password_field :password, autocomplete: "Nouveau mot de passe", style:"width: 100%;height:50px; border-radius:4px; text-align:center;", class: "input-border"%>
   </div>
 
   <div class="col">
