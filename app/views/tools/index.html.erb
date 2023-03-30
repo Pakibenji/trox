@@ -27,8 +27,7 @@
     <div class="card">    
       <%= image_tag tools.pic, class:"card-img-top",style:"height:30em;"%>
       <div class="card-body">
-        <h5 class="card-title"><%= tools.title %></h5>
-        <p class="card-title"><%= tools.description %>
+        <h5 class="card-title text-truncate"><%= tools.title %></h5>
         <p class="card-text">Actuellement disponible :</span>
           <% if tools.loaned === true %>
           ❌
@@ -37,13 +36,13 @@
           <%end%>
         </p>
         <p class="card-text">Caution :<%= tools.caution %> €</p>
-        <p class="card-text">Etat de l'outil : <%= tools.condition %></p>
+        <p class="card-text text-truncate">Etat de l'outil : <%= tools.condition %></p>
 
         <%= link_to "Voir l'annonce", tools ,id:"loan_button", class:"loan_button" %>
 
       </div>
        <div class="card-footer" style="text-align:center">
-        <small >Annonce postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
+        <small >Postée le <%= tools.created_at.strftime('%d/%m/%Y')%></small>
       </div>
     </div>
 
