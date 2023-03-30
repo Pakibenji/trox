@@ -24,6 +24,12 @@
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Localisation :</span><%=@tool.location%></li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Annonce déposée le :</span><%=@tool.created_at.strftime('%d/%m/%Y') %></li>
                 <button id="loan_button"><%= link_to "Emprunter l'outil", new_tool_loan_path(@tool), class:"loan_button"%></button>
+                <li class="mb-2 mb-xl-3 display-28">
+                  <span class="display-26 text-secondary me-2 font-weight-600">Par :</span>
+                  <a href="<%= user_path(@tool.user) %>">
+                    <%= @tool.user.firstname %> <%= @tool.user.lastname %>
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="col-lg-12 mb-4 mb-sm-5" id="tool_show_description">
