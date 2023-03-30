@@ -8,10 +8,15 @@ class Loan < ApplicationRecord
     before_create :loaned_true_or_false
     after_destroy :mark_tool_as_false
     after_create :loan_send
+    after_create :loan_confirmation_send
     validate :cant_loan_before_today
 
     def loan_send
       UserMailer.loan_email(self).deliver_now
+    end
+
+    def loan_confirmation_send
+      UserMailer.loan_confirmation_email(self).deliver_now
     end
 
     private
