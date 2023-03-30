@@ -55,18 +55,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 });
 
-/*const codesPostaux = require("codes-postaux");
 
-codesPostaux.find(75001);
-codesPostaux.find("75001");
-*/
-/*<script>
-function editDescription() {
-  var description = document.getElementById("description");
-  var currentText = description.value;
-  var newText = prompt("Modifier la description :", currentText);
-  if (newText !== null) {
-    description.value = newText;
-  }
-}
-</script>*/
