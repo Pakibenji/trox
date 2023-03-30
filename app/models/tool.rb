@@ -7,7 +7,7 @@ class Tool < ApplicationRecord
     validates :pic, presence: true 
     validates :location, presence: true
     validates :condition, presence: true, length: {maximum: 30,too_long:"%{count} caractères autorisés pour l'état de l'outil"}
-    validates :caution, presence: true
+    validates :caution, presence: true, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 10000, message: "La caution doit être comprise entre 0 et 10 000€" }
     after_initialize :set_defaults
 
     geocoded_by :full_address
