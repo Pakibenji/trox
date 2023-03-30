@@ -16,7 +16,9 @@
 
  */
 /*Results*/
-
+#index_tools{
+  overflow-x: hidden;
+}
 
 #title_results{
   margin: 30px;
@@ -12194,8 +12196,8 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #ff6347;
+  border: 1px solid #ff6347;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;

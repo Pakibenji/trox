@@ -2,7 +2,6 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    console.log("hello");
     const mapElement = document.getElementById('map');
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhY2hpbGxzIiwiYSI6ImNsZmt6ZGtmMDAwNXUzeW8zYWs1ZTR6ejAifQ.lgzKRSs2gyIavtaSX7kbwQ'
     var map = new mapboxgl.Map ({
