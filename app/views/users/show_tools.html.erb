@@ -1,34 +1,23 @@
 <%= render "/layouts/navbar"%>
-<section class="bg-light" style= "height: 100vh">
 
+<h1 style="text-align:center; padding :100px 0px 50px 0px">Mes outils</h1>
 
-<div id="cards-container" class= "container">
-<div id="cards" class="row row-cols-1 row-cols-md-3 g-4">
-  <% @user.tools.each do |tool| %>
-  
-   <div class="col">
-    <div class="card">    
-      <%= image_tag tool.pic, class:"card-img-top",style:"height:30em;"%>
-      <div class="card-body">
-        <h5 class="card-title  text-truncate"><%= tool.title %></h5>
-        <p class="card-text">Actuellement disponible :</span>
-          <% if tool.loaned === true %>
-          ❌
-          <%else%>
-          ✅
-          <%end%>
-        </p>
-        <p class="card-text">Caution :<%= tool.caution %> €</p>
-        <p class="card-text  text-truncate">Etat de l'outil : <%= tool.condition %></p>
-        <%= link_to "Voir l'annonce", tool ,id:"loan_button", class:"loan_button" %>
-      </div>
-       <div class="card-footer" style="text-align:center">
-        <small >Postée le <%= tool.created_at.strftime('%d/%m/%Y')%></small>
-      </div>
-    </div>
-    </div>
-<%end%>
-</div>
-
-</section>
+<table class="table table-striped table-hover text-center">
+<thead>
+    <tr>
+      <th scope="col">Nom de l'outil</th>
+      <th scope="col">Disponibilité de l'outil</th>
+      <th scope="col">Voir les détails</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% current_user.tools.each do |tool| %>
+    <tr class="align-middle">
+      <td><%=tool.title%></td>
+      <td><%=tool.loaned ? "❌" : "✅" %></td>
+            <td><%= link_to "Voir", tool, type:"button", id:"loan_button" ,class:"loan_button" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
