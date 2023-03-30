@@ -20,4 +20,12 @@ class UserMailer < ApplicationMailer
       mail(to: @user.tool.user.email, subject: 'Un utilisateur a loué ton outil!')
 
     end
+
+    def loan_confirmation_email(loan)
+      @loan = loan
+
+      @url = "https://trox.fly.dev"
+
+      mail(to: loan.user.email, subject: 'Tu as emprunté un outil!')
+    end
 end
