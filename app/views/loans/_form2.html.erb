@@ -1,4 +1,4 @@
-<h1 style="text-align :center; padding:20px">Emprunter <%= @tool.title %></h1>
+<h1 style="text-align :center; padding:20px">Modifier l'emprunt de : <%= @tool.title %></h1>
   <div class="d-flex justify-content-center">
     <%= form_with model: @loan, url: loan_path(@loan), local: true, method: :patch do |f| %>
       <div class="text-center">

@@ -1,5 +1,5 @@
 ActiveAdmin.register Tool do
-    permit_params :title, :description, :pic, :loan, :location, :caution, :condition
+    permit_params :title, :description, :pic, :location, :caution, :condition
   
     index do
       selectable_column
@@ -7,7 +7,6 @@ ActiveAdmin.register Tool do
       column :title
       column :description
       column :pic
-      column :loan
       column :location
       column :caution
       column :condition
@@ -16,7 +15,6 @@ ActiveAdmin.register Tool do
   
     filter :title
     filter :description
-    filter :loan
     filter :location
   
     form do |f|
@@ -24,7 +22,6 @@ ActiveAdmin.register Tool do
         f.input :title
         f.input :description
         f.input :pic
-        f.input :loan
         f.input :location
         f.input :caution
         f.input :condition
