@@ -38,7 +38,7 @@ class ToolsController < ApplicationController
 
     respond_to do |format|
       if @tool.save
-        format.html { redirect_to tool_url(@tool), notice: "Tool was successfully created." }
+        format.html { redirect_to tool_url(@tool), notice: "Outil ajouté !" }
         format.json { render :show, status: :created, location: @tool }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class ToolsController < ApplicationController
   def update
     respond_to do |format|
       if @tool.update(tool_params)
-        format.html { redirect_to tool_url(@tool), notice: "Tool was successfully updated." }
+        format.html { redirect_to tool_url(@tool), notice: "Outil mis à jour !" }
         format.json { render :show, status: :ok, location: @tool }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,7 +65,7 @@ class ToolsController < ApplicationController
     @tool.destroy
 
     respond_to do |format|
-      format.html { redirect_to tools_url, notice: "Tool was successfully destroyed." }
+      format.html { redirect_to tools_url, notice: "Outil supprimé !" }
       format.json { head :no_content }
     end
   end
