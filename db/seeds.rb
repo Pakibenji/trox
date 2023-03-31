@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
 require 'faker'
 
-AdminUser.create!(email: 'admintrox@yopmail.com', password: 'maxlamenace', password_confirmation: 'maxlamenace') if Rails.env.development?
+if Rails.env.development?
+  AdminUser.create!(email: 'admin@example.com', password: 'password',
+                    password_confirmation: 'password')
+end

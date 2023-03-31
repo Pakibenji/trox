@@ -15,10 +15,13 @@
  *= require application
 
  */
-/*Results*/
-#index_tools{
+html{
   overflow-x: hidden;
 }
+
+
+/*Results*/
+
 
 #title_results{
   margin: 30px;
