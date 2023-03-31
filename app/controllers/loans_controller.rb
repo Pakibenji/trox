@@ -64,7 +64,9 @@ class LoansController < ApplicationController
     @loan.destroy
 
     respond_to do |format|
-      format.html { redirect_to loans_url, notice: 'Loan was successfully destroyed.' }
+
+      format.html { redirect_to loans_url, notice: "L'emprunt a été supprimé !" }
+
       format.json { head :no_content }
     end
   end
