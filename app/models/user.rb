@@ -1,14 +1,14 @@
 class User < ApplicationRecord
-  has_many :tools
-  has_many :loans
-  has_one_attached :image_url
+  has_many :tools # Un utilisateur peut avoir plusieurs outils
+  has_many :loans # Un utilisateur peut avoir plusieurs emprunts
+  has_one_attached :image_url # Un utilisateur peut avoir une image
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, # On inclut les modules de Devise
          :recoverable, :rememberable, :validatable
 
-    after_create :welcome_send
-
+    after_create :welcome_send # On appelle la méthode welcome_send après la création d'un utilisateur
+ # la méthode welcome_send permet d'envoyer un email de bienvenue à l'utilisateur
     def welcome_send
       UserMailer.welcome_email(self).deliver_now
     end
