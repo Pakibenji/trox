@@ -2,6 +2,7 @@
 
 class LoansController < ApplicationController
   before_action :authenticate_user!
+
   before_action :set_loan, only: %i[show edit update destroy]
   before_action :set_tool, only: %i[new create]
   before_action :check_loan_status, only: %i[new create]
@@ -27,7 +28,7 @@ class LoansController < ApplicationController
     @tool = @loan.tool
     @loan = Loan.find(params[:id])
   end
-
+  # le create permet de créer un nouvel emprunt, il prend en paramètre le tool_id et le user_id, il est lié à un outil et à un utilisateur.
   # POST /loans or /loans.json
   def create
     @tool = Tool.find(params[:tool_id])
@@ -41,7 +42,7 @@ class LoansController < ApplicationController
       render 'new'
     end
   end
-
+  # le update permet de modifier un emprunt, il prend en paramètre le tool_id et le user_id, il est lié à un outil et à un utilisateur.
   # PATCH/PUT /loans/1 or /loans/1.json
   def update
     respond_to do |format|
@@ -54,7 +55,7 @@ class LoansController < ApplicationController
       end
     end
   end
-
+  # le destroy permet de supprimer un emprunt, il prend en paramètre le tool_id et le user_id, il est lié à un outil et à un utilisateur.
   # DELETE /loans/1 or /loans/1.json
   def destroy
     @loan.destroy
