@@ -8,7 +8,7 @@
       <%= form_with(model: tool) do |form| %>
         <% if tool.errors.any? %>
           <div style="color: red">
-            <h5><%= pluralize(tool.errors.count, "erreur") %>, cette annonce ne peut pas être pubilé:</h5>
+            <h5><%= pluralize(tool.errors.count, "erreur") %>, cette annonce ne peut pas être publiée:</h5>
             <ul>
               <% tool.errors.each do |error| %>
                 <li><%= error.full_message %></li>
