@@ -1,7 +1,9 @@
-class SearchController < ApplicationController4
-  # l'index permet de faire une recherche sur les outils
+# frozen_string_literal: true
+
+class SearchController < ApplicationController
   def index
-  @query = Tool.ransack(params[:q]) # Ransack permet de faire des recherches sur les outils
-  @tools = @query.result(distinct: true) # Résultat de la recherche
+    @query = Tool.ransack(params[:q])
+    @tools = @query.result(distinct: true)
+
   end
 end

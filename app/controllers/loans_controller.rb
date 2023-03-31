@@ -1,19 +1,21 @@
+# frozen_string_literal: true
+
 class LoansController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_loan, only: %i[ show edit update destroy ]
-  before_action :set_tool, only: [:new, :create]
-  before_action :check_loan_status, only: [:new, :create]
-  before_action :users_tool, only: [:new, :create]
-  before_action :only_borrower_and_owner, only: [:edit, :update, :destroy]
-  # Le controller des emprunts, il permet de créer, modifier, supprimer et voir les emprunts.
+
+  before_action :set_loan, only: %i[show edit update destroy]
+  before_action :set_tool, only: %i[new create]
+  before_action :check_loan_status, only: %i[new create]
+  before_action :users_tool, only: %i[new create]
+  before_action :only_borrower_and_owner, only: %i[edit update destroy]
+
   # GET /loans or /loans.json
   def index
     @loans = Loan.all
   end
 
   # GET /loans/1 or /loans/1.json
-  def show
-  end
+  def show; end
 
   # GET /loans/new
   def new
@@ -59,43 +61,42 @@ class LoansController < ApplicationController
     @loan.destroy
 
     respond_to do |format|
-      format.html { redirect_to loans_url, notice: "Loan was successfully destroyed." }
+      format.html { redirect_to loans_url, notice: 'Loan was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    # le set_loan permet de trouver un emprunt en fonction de son id.
-    def set_loan
-      @loan = Loan.find(params[:id])
-    end
-    # le loan_params permet de définir les paramètres d'un emprunt.
-    # Only allow a list of trusted parameters through.
-    def loan_params
-      params.require(:loan).permit(:start_date, :end_date)
-    end
-    # le set_tool permet de trouver un outil en fonction de son id.
-    def set_tool
-      @tool = Tool.find(params[:tool_id])
-    end
-    # le check_loan_status permet de vérifier si l'outil est déjà emprunté.
-    def check_loan_status
-      if @tool.loaned?
-        redirect_to tools_path, notice: "Cet outil est déjà emprunté."
-      end
-    end
-    # le users_tool permet de vérifier si l'utilisateur est le propriétaire de l'outil.
-    def users_tool
-      if current_user.id == @tool.user.id
-        redirect_to tools_path, notice: "Vous ne pouvez pas emprunter votre propre outil."
-      end
-    end
-    # le only_borrower_and_owner permet de vérifier si l'utilisateur est le propriétaire de l'outil ou l'emprunteur.
-    def only_borrower_and_owner
-      if current_user.id != @loan.user.id && current_user.id != @loan.tool.user.id
-        redirect_to tools_path, notice: "Vous n'êtes pas autorisé à modifier cet emprunt."
-      end
-    end
 
+  # Use callbacks to share common setup or constraints between actions.
+  def set_loan
+    @loan = Loan.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def loan_params
+    params.require(:loan).permit(:start_date, :end_date)
+  end
+
+  def set_tool
+    @tool = Tool.find(params[:tool_id])
+  end
+
+  def check_loan_status
+    return unless @tool.loaned?
+
+    redirect_to tools_path, notice: 'Cet outil est déjà emprunté.'
+  end
+
+  def users_tool
+    return unless current_user.id == @tool.user.id
+
+    redirect_to tools_path, notice: 'Vous ne pouvez pas emprunter votre propre outil.'
+  end
+
+  def only_borrower_and_owner
+    return unless current_user.id != @loan.user.id && current_user.id != @loan.tool.user.id
+
+    redirect_to tools_path, notice: "Vous n'êtes pas autorisé à modifier cet emprunt."
+  end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_many :tools # Un utilisateur peut avoir plusieurs outils
   has_many :loans # Un utilisateur peut avoir plusieurs emprunts
@@ -7,11 +9,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, # On inclut les modules de Devise
          :recoverable, :rememberable, :validatable
 
-    after_create :welcome_send # On appelle la méthode welcome_send après la création d'un utilisateur
- # la méthode welcome_send permet d'envoyer un email de bienvenue à l'utilisateur
-    def welcome_send
-      UserMailer.welcome_email(self).deliver_now
-    end
 
+  after_create :welcome_send
 
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
 end

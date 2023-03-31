@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 class ToolsController < ApplicationController
-  before_action :set_tool, only: %i[ show edit update destroy ]
+  before_action :set_tool, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: [:new]
-  before_action :check_owner, only: [:edit, :update, :destroy]
-  # le controller des outils, il permet de créer, modifier, supprimer et voir les outils.
+
+  before_action :check_owner, only: %i[edit update destroy]
+
   # GET /tools or /tools.json
   def index
     @tools = Tool.all
@@ -29,8 +32,7 @@ class ToolsController < ApplicationController
   end
 
   # GET /tools/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /tools or /tools.json
   def create
@@ -38,7 +40,7 @@ class ToolsController < ApplicationController
 
     respond_to do |format|
       if @tool.save
-        format.html { redirect_to tool_url(@tool), notice: "Tool was successfully created." }
+        format.html { redirect_to tool_url(@tool), notice: 'Tool was successfully created.' }
         format.json { render :show, status: :created, location: @tool }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -51,7 +53,7 @@ class ToolsController < ApplicationController
   def update
     respond_to do |format|
       if @tool.update(tool_params)
-        format.html { redirect_to tool_url(@tool), notice: "Tool was successfully updated." }
+        format.html { redirect_to tool_url(@tool), notice: 'Tool was successfully updated.' }
         format.json { render :show, status: :ok, location: @tool }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,23 +67,25 @@ class ToolsController < ApplicationController
     @tool.destroy
 
     respond_to do |format|
-      format.html { redirect_to tools_url, notice: "Tool was successfully destroyed." }
+      format.html { redirect_to tools_url, notice: 'Tool was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_tool
-      @tool = Tool.find(params[:id])
-    end
- # On vérifie que l'utilisateur est bien le propriétaire de l'outil
-    def check_owner 
-      redirect_to @tool, alert:"Vous ne pouvez pas modifier cet outil" unless current_user == @tool.user
-    end
 
-    # Only allow a list of trusted parameters through.
-    def tool_params # On définit les paramètres d'un outil
-      params.require(:tool).permit(:title, :description, :pic, :loan, :location, :caution, :condition)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_tool
+    @tool = Tool.find(params[:id])
+  end
+
+  def check_owner
+    redirect_to @tool, alert: 'Vous ne pouvez pas modifier cet outil' unless current_user == @tool.user
+  end
+
+  # Only allow a list of trusted parameters through.
+  def tool_params
+    params.require(:tool).permit(:title, :description, :pic, :loan, :location, :caution, :condition)
+  end
+
 end
