@@ -68,7 +68,7 @@
 
   <h2><li>Lien de mise en production</li></h2>
     <ul>
-      <li>https://t-rox.fly.dev/</li>
+      <li>https://troxx.fly.dev/</li>
     </ul>
 </ol>
   
