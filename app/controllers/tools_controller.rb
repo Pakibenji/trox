@@ -2,13 +2,13 @@ class ToolsController < ApplicationController
   before_action :set_tool, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: [:new]
   before_action :check_owner, only: [:edit, :update, :destroy]
-
+  # le controller des outils, il permet de créer, modifier, supprimer et voir les outils.
   # GET /tools or /tools.json
   def index
     @tools = Tool.all
-
-    @markers = @tools.map do |tool|
-      {
+    # On récupère tous les outils
+    @markers = @tools.map do |tool| # On boucle sur les outils
+      { # On crée un hash avec les infos de l'outil
         lat: tool.latitude,
         lng: tool.longitude,
         name: tool.title,
@@ -25,7 +25,7 @@ class ToolsController < ApplicationController
 
   # GET /tools/new
   def new
-    @tool = current_user.tools.build
+    @tool = current_user.tools.build # On crée un nouvel outil, on le lie à l'utilisateur avec current_user et la méthode build
   end
 
   # GET /tools/1/edit
@@ -34,7 +34,7 @@ class ToolsController < ApplicationController
 
   # POST /tools or /tools.json
   def create
-    @tool = current_user.tools.build(tool_params)
+    @tool = current_user.tools.build(tool_params) # On crée un nouvel outil, on le lie à l'utilisateur avec current_user et la méthode build
 
     respond_to do |format|
       if @tool.save
@@ -75,13 +75,13 @@ class ToolsController < ApplicationController
     def set_tool
       @tool = Tool.find(params[:id])
     end
-
+ # On vérifie que l'utilisateur est bien le propriétaire de l'outil
     def check_owner 
       redirect_to @tool, alert:"Vous ne pouvez pas modifier cet outil" unless current_user == @tool.user
     end
 
     # Only allow a list of trusted parameters through.
-    def tool_params
+    def tool_params # On définit les paramètres d'un outil
       params.require(:tool).permit(:title, :description, :pic, :loan, :location, :caution, :condition)
     end
 end
