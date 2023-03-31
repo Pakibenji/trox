@@ -9,7 +9,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, # On inclut les modules de Devise
          :recoverable, :rememberable, :validatable
 
-
   after_create :welcome_send
 
   def welcome_send

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 ActiveAdmin.register Tool do
-
   permit_params :title, :description, :pic, :loan, :location, :caution, :condition
 
   index do
@@ -35,4 +34,3 @@ ActiveAdmin.register Tool do
     f.actions
   end
 end
-
