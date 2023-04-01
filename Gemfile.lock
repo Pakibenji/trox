@@ -402,6 +402,7 @@ DEPENDENCIES
   sass-rails
   selenium-webdriver
   sprockets-rails
+  sqlite3
   stimulus-rails
   table_print
   turbo-rails

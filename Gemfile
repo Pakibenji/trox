@@ -100,3 +100,11 @@ gem 'dockerfile-rails', '>= 1.2', group: :development
 
 gem 'redis', '~> 5.0'
 gem 'rubocop', require: false
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '~> 1.1'
+end
