@@ -19,6 +19,9 @@
                     ✅
                   <%end%>
                 </li>
+                                <% current_user.loans.each do |loan| %>
+                <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Outil emprunté jusqu'au :</span><%= loan.end_date.strftime('%d/%m/%Y')%></li>
+                <%end%>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Montant de la caution :</span><%=@tool.caution%> €</li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Etat de l'outil :</span><%=@tool.condition%></li>
                 <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Localisation :</span><%=@tool.location%></li>
