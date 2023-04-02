@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
     @user = user
 
     # on définit une variable @url qu'on utilisera dans la view d’e-mail
-    @url  = 'https://trox.fly.dev'
+    @url  = 'https://troxfr.herokuapp.com/'
 
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: 'Bienvenue chez nous !')
@@ -17,7 +17,7 @@ class UserMailer < ApplicationMailer
   def loan_email(user)
     @user = user
 
-    @url = 'https://trox.fly.dev'
+    @url = 'https://troxfr.herokuapp.com/'
 
     mail(to: @user.tool.user.email, subject: 'Un utilisateur a loué ton outil!')
   end
@@ -25,7 +25,7 @@ class UserMailer < ApplicationMailer
   def loan_confirmation_email(loan)
     @loan = loan
 
-    @url = 'https://trox.fly.dev'
+    @url = 'https://troxfr.herokuapp.com/'
 
     mail(to: loan.user.email, subject: 'Tu as emprunté un outil!')
   end

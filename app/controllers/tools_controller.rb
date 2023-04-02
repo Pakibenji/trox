@@ -23,7 +23,11 @@ class ToolsController < ApplicationController
 
   # GET /tools/1 or /tools/1.json
   def show
-    @tool = Tool.find(params[:id])
+    if user_signed_in?
+      @tool = Tool.find(params[:id])
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /tools/new

@@ -402,6 +402,7 @@ DEPENDENCIES
   sass-rails
   selenium-webdriver
   sprockets-rails
+  sqlite3
   stimulus-rails
   table_print
   turbo-rails
@@ -410,7 +411,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.2.1p31
 
 BUNDLED WITH
    2.4.6
